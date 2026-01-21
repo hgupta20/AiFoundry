@@ -1,0 +1,59 @@
+{
+  "slug": "energy-transition-advisor",
+  "name": "Energy Transition Advisor",
+  "tagline": "Guides customers through powertrain technology choices for the energy transition",
+  "lane": "Transform",
+  "maturity": "Vision",
+  "persona": ["Manager", "Executive", "Analyst"],
+  "overview": "The Energy Transition Advisor envisions AI that helps customers navigate the complex powertrain technology landscape—diesel, natural gas, hydrogen, battery electric, and hybrid. It would analyze customer applications, regulatory trajectories, and TCO implications to recommend optimal transition paths.",
+  "whatItDoes": [
+    "Analyzes customer applications and operating profiles",
+    "Models TCO across powertrain technology options",
+    "Incorporates regulatory and incentive projections",
+    "Recommends phased transition roadmaps",
+    "Compares infrastructure requirements and timelines"
+  ],
+  "prompts": [
+    "What's the optimal powertrain strategy for this regional fleet?",
+    "When does battery electric make sense for long-haul in the Midwest?",
+    "Model the TCO impact of the new federal incentives",
+    "What infrastructure would this fleet need for hydrogen transition?",
+    "Compare transition paths for this customer's sustainability goals"
+  ],
+  "inputs": [
+    "Customer fleet profiles and operations data",
+    "Powertrain technology specifications and roadmaps",
+    "Energy cost and infrastructure projections",
+    "Regulatory and incentive databases",
+    "TCO modeling parameters"
+  ],
+  "outputs": [
+    "Technology recommendation reports",
+    "TCO comparison analyses",
+    "Transition roadmap options",
+    "Infrastructure requirement summaries",
+    "Regulatory impact assessments"
+  ],
+  "impact": [
+    {
+      "metric": "Customer Confidence",
+      "value": "Strategic (target)",
+      "description": "Confident, data-driven transition decisions"
+    },
+    {
+      "metric": "Cummins Positioning",
+      "value": "Strategic (target)",
+      "description": "Trusted advisor role in energy transition"
+    }
+  ],
+  "guardrails": [
+    "Recommendations are guidance, not commitments",
+    "Technology projections include uncertainty ranges",
+    "Customer decisions require human sales and engineering engagement",
+    "Does not make product availability or pricing commitments",
+    "Regulatory projections include 'subject to change' disclaimers"
+  ],
+  "whatsNext": "Vision phase—defining data requirements, model architecture, and customer engagement approach. Exploring pilot with strategic accounts.",
+  "relatedAgents": ["fleet-reliability-agent", "power-system-architect-agent"]
+}
+

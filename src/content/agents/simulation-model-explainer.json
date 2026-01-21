@@ -1,0 +1,58 @@
+{
+  "slug": "simulation-model-explainer",
+  "name": "Simulation & Model Explainer",
+  "tagline": "Interprets complex simulation results and explains model behavior",
+  "lane": "Build",
+  "maturity": "Pilot",
+  "persona": ["Engineer"],
+  "overview": "The Simulation & Model Explainer helps engineers understand and communicate complex simulation results. It interprets CFD, FEA, and system simulation outputs, identifies key findings, explains model behavior in plain language, and helps prepare results for design reviews.",
+  "whatItDoes": [
+    "Summarizes key findings from simulation results",
+    "Identifies critical areas requiring attention (hot spots, stress concentrations)",
+    "Explains model behavior and parameter sensitivities",
+    "Compares results across simulation iterations",
+    "Generates presentation-ready summaries for design reviews"
+  ],
+  "prompts": [
+    "Summarize the thermal analysis results for this manifold design",
+    "What are the key stress concentrations I should focus on?",
+    "How do the results compare to the previous design iteration?",
+    "Explain why flow separation is occurring in this region",
+    "Prepare a summary of this CFD analysis for the design review"
+  ],
+  "inputs": [
+    "CFD simulation results and post-processing data",
+    "FEA stress/strain analysis outputs",
+    "System simulation results",
+    "Model setup parameters and boundary conditions",
+    "Historical simulation databases"
+  ],
+  "outputs": [
+    "Executive summaries of simulation findings",
+    "Critical area identification with recommendations",
+    "Plain-language explanations of model behavior",
+    "Iteration comparison reports",
+    "Design review presentation materials"
+  ],
+  "impact": [
+    {
+      "metric": "Results Communication",
+      "value": "60% faster",
+      "description": "Faster preparation of simulation summaries"
+    },
+    {
+      "metric": "Knowledge Transfer",
+      "value": "Improved",
+      "description": "Better understanding across engineering disciplines"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—simulation engineers validate all interpretations",
+    "Does not make design recommendations autonomously",
+    "Explanations based on physics principles, not speculation",
+    "Confidence levels indicate certainty of interpretations",
+    "Complex findings require expert review before communication"
+  ],
+  "relatedAgents": ["test-validation-agent", "requirements-to-design-copilot"]
+}
+

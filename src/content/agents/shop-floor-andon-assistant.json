@@ -1,0 +1,59 @@
+{
+  "slug": "shop-floor-andon-assistant",
+  "name": "Shop Floor Andon Assistant",
+  "tagline": "Intelligent support for production line issues and escalations",
+  "lane": "Make",
+  "maturity": "Concept",
+  "persona": ["Shop Floor", "Manager"],
+  "overview": "The Shop Floor Andon Assistant provides intelligent support when operators pull the andon cord or flag issues. It helps diagnose problems, suggests solutions from the knowledge base, routes escalations to the right experts, and tracks resolution for continuous improvement.",
+  "whatItDoes": [
+    "Guides operators through initial problem diagnosis",
+    "Suggests solutions from historical issue resolution database",
+    "Routes escalations to appropriate support resources",
+    "Tracks issue resolution times and outcomes",
+    "Identifies patterns across recurring issues"
+  ],
+  "prompts": [
+    "The torque gun is giving intermittent errors",
+    "I'm seeing a gap in this weld that looks out of spec",
+    "The fixture isn't aligning correctly on this variant",
+    "Who should I call for this equipment issue?",
+    "Has anyone seen this problem before?"
+  ],
+  "inputs": [
+    "Operator problem descriptions",
+    "Equipment status and error codes",
+    "Historical issue resolution records",
+    "Support contact directory",
+    "Station and operation context"
+  ],
+  "outputs": [
+    "Diagnostic questions and checklists",
+    "Solution suggestions from knowledge base",
+    "Escalation routing with context",
+    "Resolution tracking",
+    "Issue pattern reports"
+  ],
+  "impact": [
+    {
+      "metric": "Time to Resolution",
+      "value": "30% reduction (projected)",
+      "description": "Faster issue resolution with better support"
+    },
+    {
+      "metric": "Repeat Issues",
+      "value": "20% reduction (projected)",
+      "description": "Better knowledge capture and reuse"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—supervisors and experts make resolution decisions",
+    "Safety issues always escalate to human supervision immediately",
+    "Does not authorize production to continue without human approval",
+    "Suggestions based on historical data, not autonomous diagnosis",
+    "All resolutions tracked for learning and improvement"
+  ],
+  "whatsNext": "Developing concept with manufacturing excellence team. Defining integration with existing andon systems.",
+  "relatedAgents": ["digital-work-instructions-agent", "quality-escapes-prevention-agent"]
+}
+

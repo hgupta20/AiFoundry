@@ -1,0 +1,59 @@
+{
+  "slug": "supply-chain-disruption-agent",
+  "name": "Supply Chain Disruption Agent",
+  "tagline": "Early warning and response support for supply chain risks",
+  "lane": "Run",
+  "maturity": "Concept",
+  "persona": ["Manager", "Analyst", "Procurement"],
+  "overview": "The Supply Chain Disruption Agent monitors for potential supply chain disruptions and helps teams respond quickly when issues arise. It scans external risk signals, correlates with supplier dependencies, and recommends mitigation actions—providing early warning before disruptions impact production.",
+  "whatItDoes": [
+    "Monitors news, weather, and geopolitical signals for supply risks",
+    "Correlates external events with supplier and part dependencies",
+    "Calculates potential production impact from disruptions",
+    "Recommends mitigation actions and alternative sources",
+    "Tracks disruption response and recovery progress"
+  ],
+  "prompts": [
+    "What suppliers are at elevated risk this week?",
+    "What's our exposure if this port closure continues?",
+    "Find alternative sources for this component",
+    "What's the production impact if Supplier X is delayed 2 weeks?",
+    "Show me our tier-2 exposure in this region"
+  ],
+  "inputs": [
+    "External risk signal feeds (news, weather, financial)",
+    "Supplier master data and tier mappings",
+    "Part and BOM dependencies",
+    "Production schedules and buffer stock levels",
+    "Historical disruption response data"
+  ],
+  "outputs": [
+    "Supplier risk alerts and dashboards",
+    "Impact assessments with production exposure",
+    "Mitigation recommendations",
+    "Alternative source options",
+    "Response tracking and reporting"
+  ],
+  "impact": [
+    {
+      "metric": "Early Warning",
+      "value": "2-3 weeks (projected)",
+      "description": "Advance notice of potential disruptions"
+    },
+    {
+      "metric": "Response Time",
+      "value": "40% faster (projected)",
+      "description": "Faster mitigation with better information"
+    }
+  ],
+  "guardrails": [
+    "Risk signals are alerts for investigation, not automatic actions",
+    "Mitigation decisions require procurement/supply chain approval",
+    "Alternative source recommendations vetted by sourcing team",
+    "Supplier communication coordinated through normal channels",
+    "Financial decisions follow standard approval processes"
+  ],
+  "whatsNext": "Developing proof of concept with supply chain risk management team. Defining data sources and alert thresholds.",
+  "relatedAgents": ["supplier-performance-negotiation-agent", "changeover-scheduling-assistant"]
+}
+

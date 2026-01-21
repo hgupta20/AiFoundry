@@ -1,0 +1,63 @@
+{
+  "slug": "service-technician-copilot",
+  "name": "Service Technician Copilot",
+  "tagline": "Expert diagnostic support for field technicians when and where they need it",
+  "lane": "Sell & Serve",
+  "maturity": "Pilot",
+  "persona": ["Service Tech", "Technician"],
+  "overview": "The Service Technician Copilot provides real-time diagnostic support to field service technicians. It analyzes fault codes, suggests diagnostic steps, retrieves relevant service bulletins, and connects technicians with remote experts—helping resolve issues faster and improving first-time fix rates.",
+  "whatItDoes": [
+    "Interprets fault codes and symptom descriptions",
+    "Recommends diagnostic steps based on similar cases",
+    "Retrieves relevant technical service bulletins",
+    "Provides access to service manuals and specifications",
+    "Connects to remote technical experts when needed"
+  ],
+  "prompts": [
+    "I'm seeing SPN 3226 FMI 4 on a 2021 X15 - what should I check?",
+    "Customer reports low power on hills - what's the diagnostic path?",
+    "Are there any TSBs related to this aftertreatment issue?",
+    "What's the spec for injector return flow on this engine?",
+    "I need help with a problem I haven't seen before"
+  ],
+  "inputs": [
+    "Fault codes and error logs",
+    "Symptom descriptions from technicians",
+    "Equipment telemetry when available",
+    "Service history and prior repairs",
+    "Technical service bulletins"
+  ],
+  "outputs": [
+    "Diagnostic step recommendations",
+    "Relevant TSBs and service procedures",
+    "Parts and tools required",
+    "Connection to remote experts with context",
+    "Service documentation updates"
+  ],
+  "impact": [
+    {
+      "metric": "First-Time Fix Rate",
+      "value": "+18%",
+      "description": "More issues resolved on first visit"
+    },
+    {
+      "metric": "Diagnostic Time",
+      "value": "35% faster",
+      "description": "Faster path to root cause"
+    },
+    {
+      "metric": "Customer Uptime",
+      "value": "Improved",
+      "description": "Less downtime for customers"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—technicians responsible for diagnosis and repair",
+    "Does not authorize warranty repairs autonomously",
+    "Safety-critical repairs require certified technician judgment",
+    "Recommendations based on approved service procedures only",
+    "Expert escalation available 24/7 for complex issues"
+  ],
+  "relatedAgents": ["warranty-claims-assistant", "parts-fitment-alternatives-agent"]
+}
+

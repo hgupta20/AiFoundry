@@ -1,0 +1,59 @@
+{
+  "slug": "regulatory-compliance-agent",
+  "name": "Regulatory & Compliance Agent",
+  "tagline": "Navigates regulatory requirements and tracks compliance status",
+  "lane": "Protect",
+  "maturity": "Concept",
+  "persona": ["Compliance", "Engineer", "Manager"],
+  "overview": "The Regulatory & Compliance Agent helps teams navigate complex regulatory requirements across emissions, safety, trade, and other domains. It interprets regulations, tracks compliance status, alerts to upcoming changes, and supports audit preparation with organized documentation.",
+  "whatItDoes": [
+    "Interprets regulatory requirements in context of Cummins operations",
+    "Tracks compliance status across products and facilities",
+    "Alerts teams to upcoming regulatory changes",
+    "Supports audit preparation with documentation organization",
+    "Maps regulations to specific product requirements"
+  ],
+  "prompts": [
+    "What are the EPA 2027 requirements for our medium-duty engines?",
+    "Which products need EU Stage VI certification by next year?",
+    "What documentation do we need for the upcoming ISO audit?",
+    "How does the new trade regulation affect our China suppliers?",
+    "Show me compliance status for the X15 product family"
+  ],
+  "inputs": [
+    "Regulatory databases and publications",
+    "Product certification records",
+    "Compliance tracking systems",
+    "Audit schedules and findings",
+    "Legal and regulatory guidance"
+  ],
+  "outputs": [
+    "Regulatory requirement summaries",
+    "Compliance status dashboards",
+    "Change alert notifications",
+    "Audit preparation checklists",
+    "Product-regulation mapping reports"
+  ],
+  "impact": [
+    {
+      "metric": "Regulatory Research Time",
+      "value": "70% reduction (projected)",
+      "description": "Faster access to relevant requirements"
+    },
+    {
+      "metric": "Compliance Visibility",
+      "value": "Comprehensive (projected)",
+      "description": "Complete view across products and regulations"
+    }
+  ],
+  "guardrails": [
+    "Regulatory interpretation validated by legal and compliance teams",
+    "Does not make certification or compliance decisions",
+    "Official regulatory sources only—no unofficial interpretations",
+    "Market-specific requirements verified by local experts",
+    "All regulatory advice includes 'consult legal/compliance' guidance"
+  ],
+  "whatsNext": "Developing concept with global compliance team. Defining scope and regulatory domain priorities.",
+  "relatedAgents": ["safety-coach-agent", "security-analyst-copilot"]
+}
+

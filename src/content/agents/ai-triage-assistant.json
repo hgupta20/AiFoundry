@@ -1,0 +1,55 @@
+{
+  "slug": "ai-triage-assistant",
+  "name": "AI Triage Assistant",
+  "tagline": "Routes issues and requests to the right knowledge, system, or expert",
+  "lane": "Front Door",
+  "maturity": "Live",
+  "persona": ["All Employees"],
+  "overview": "The AI Triage Assistant serves as the intelligent entry point to Cummins AI capabilities. It understands natural language questions and requests, determines intent, and routes users to the most appropriate agent, knowledge base, or human expert. Think of it as a smart switchboard that ensures every query gets to the right place quickly.",
+  "whatItDoes": [
+    "Interprets natural language questions and requests from employees",
+    "Classifies intent and identifies the best destination (agent, system, or expert)",
+    "Routes to specialized agents like Service Technician Copilot or HR Onboarding",
+    "Provides direct answers when appropriate from approved knowledge sources",
+    "Escalates to human experts when AI cannot confidently help"
+  ],
+  "prompts": [
+    "I have a question about a fault code on an X15 engine",
+    "How do I submit a PTO request?",
+    "I need help understanding a supplier contract clause",
+    "What's the process for reporting a near-miss safety incident?",
+    "Can you help me find the torque specs for a cylinder head?"
+  ],
+  "inputs": [
+    "Natural language questions and requests",
+    "User context (role, department, location)",
+    "Conversation history for multi-turn interactions"
+  ],
+  "outputs": [
+    "Routing to appropriate specialized agent",
+    "Direct answers with source citations when appropriate",
+    "Escalation to human experts with context summary",
+    "Clarifying questions when intent is unclear"
+  ],
+  "impact": [
+    {
+      "metric": "Resolution Speed",
+      "value": "70% faster",
+      "description": "Questions reach the right resource on first attempt"
+    },
+    {
+      "metric": "Self-Service Rate",
+      "value": "45%",
+      "description": "Queries resolved without human escalation"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—humans remain accountable for all decisions",
+    "Routes to human experts when confidence is below threshold",
+    "Does not access systems requiring elevated privileges",
+    "Transparent about what it can and cannot do",
+    "All routing decisions are logged for review"
+  ],
+  "relatedAgents": ["ask-cummins-agent", "service-technician-copilot", "hr-onboarding-copilot"]
+}
+

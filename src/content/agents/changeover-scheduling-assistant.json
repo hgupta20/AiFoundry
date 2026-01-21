@@ -1,0 +1,59 @@
+{
+  "slug": "changeover-scheduling-assistant",
+  "name": "Changeover & Scheduling Assistant",
+  "tagline": "Optimizes production sequencing and changeover planning",
+  "lane": "Make",
+  "maturity": "Concept",
+  "persona": ["Manager", "Shop Floor"],
+  "overview": "The Changeover & Scheduling Assistant helps production planners optimize line scheduling and changeover sequences. It considers setup times, material availability, and workforce constraints to recommend schedules that maximize throughput while minimizing changeover time and costs.",
+  "whatItDoes": [
+    "Recommends optimal production sequences to minimize changeovers",
+    "Predicts changeover times based on historical data",
+    "Identifies schedule risks and conflicts",
+    "Suggests schedule adjustments when disruptions occur",
+    "Tracks schedule adherence and variance"
+  ],
+  "prompts": [
+    "What's the optimal sequence for tomorrow's production orders?",
+    "How long should the changeover from X15 to X12 take?",
+    "What's the impact of adding this rush order to today's schedule?",
+    "Which jobs can we pull forward if Line 2 goes down?",
+    "Show me schedule adherence for the past week"
+  ],
+  "inputs": [
+    "Production orders and demand",
+    "Changeover time matrices",
+    "Equipment and workforce availability",
+    "Material availability status",
+    "Historical schedule performance"
+  ],
+  "outputs": [
+    "Optimized sequence recommendations",
+    "Changeover time predictions",
+    "Schedule risk assessments",
+    "What-if scenario analysis",
+    "Performance dashboards"
+  ],
+  "impact": [
+    {
+      "metric": "Changeover Time",
+      "value": "20% reduction (projected)",
+      "description": "Better sequencing reduces total changeover time"
+    },
+    {
+      "metric": "Schedule Adherence",
+      "value": "15% improvement (projected)",
+      "description": "More realistic schedules with better planning"
+    }
+  ],
+  "guardrails": [
+    "Recommendations require planner review and approval",
+    "Does not override safety or quality constraints",
+    "Union work rules and labor agreements always respected",
+    "Human planners responsible for final schedule decisions",
+    "Suggestions include confidence levels and assumptions"
+  ],
+  "whatsNext": "Validating concept with production planning team. Defining data requirements and integration approach.",
+  "relatedAgents": ["digital-work-instructions-agent", "supply-chain-disruption-agent"]
+}
+

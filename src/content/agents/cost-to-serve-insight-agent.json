@@ -1,0 +1,58 @@
+{
+  "slug": "cost-to-serve-insight-agent",
+  "name": "Cost-to-Serve Insight Agent",
+  "tagline": "Reveals true cost-to-serve for better pricing and prioritization",
+  "lane": "Run",
+  "maturity": "Pilot",
+  "persona": ["Analyst", "Manager"],
+  "overview": "The Cost-to-Serve Insight Agent analyzes operational data to reveal the true cost of serving different customers, products, and channels. It helps identify profitability drivers and opportunities to optimize cost structure while maintaining service levels.",
+  "whatItDoes": [
+    "Calculates cost-to-serve by customer, product, and channel",
+    "Identifies high-cost activities and drivers",
+    "Compares actual vs expected cost-to-serve",
+    "Recommends optimization opportunities",
+    "Tracks cost-to-serve trends over time"
+  ],
+  "prompts": [
+    "What's the true cost-to-serve for this customer segment?",
+    "Which customers are below profitability threshold?",
+    "What's driving the high logistics cost for this region?",
+    "Compare cost-to-serve across our distribution channels",
+    "Show me cost-to-serve trends for the aftermarket business"
+  ],
+  "inputs": [
+    "Order and fulfillment data",
+    "Logistics and distribution costs",
+    "Customer service interaction data",
+    "Returns and warranty costs",
+    "Sales and pricing data"
+  ],
+  "outputs": [
+    "Cost-to-serve breakdowns by dimension",
+    "Profitability analysis and rankings",
+    "Cost driver identification",
+    "Optimization recommendations",
+    "Trend analysis and dashboards"
+  ],
+  "impact": [
+    {
+      "metric": "Cost Visibility",
+      "value": "Complete",
+      "description": "True cost-to-serve visibility across dimensions"
+    },
+    {
+      "metric": "Optimization Opportunities",
+      "value": "$5M+ identified",
+      "description": "Cost reduction opportunities identified in pilot"
+    }
+  ],
+  "guardrails": [
+    "Cost allocations validated by finance team",
+    "Customer decisions require commercial team involvement",
+    "Does not recommend customer termination autonomously",
+    "Pricing changes follow standard approval processes",
+    "Sensitive customer data access controlled by role"
+  ],
+  "relatedAgents": ["supplier-performance-negotiation-agent", "proposal-configuration-copilot"]
+}
+

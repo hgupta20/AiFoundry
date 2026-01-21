@@ -1,0 +1,59 @@
+{
+  "slug": "security-analyst-copilot",
+  "name": "Security Analyst Copilot",
+  "tagline": "Accelerates security analysis and incident response",
+  "lane": "Protect",
+  "maturity": "Concept",
+  "persona": ["Analyst"],
+  "overview": "The Security Analyst Copilot assists cybersecurity teams with threat analysis, incident investigation, and security monitoring. It correlates alerts, provides context from threat intelligence, and helps analysts work through investigations faster—augmenting human expertise with AI-powered pattern recognition.",
+  "whatItDoes": [
+    "Correlates security alerts across multiple systems",
+    "Enriches alerts with threat intelligence context",
+    "Suggests investigation paths based on similar incidents",
+    "Drafts incident reports and communication",
+    "Identifies patterns across security events"
+  ],
+  "prompts": [
+    "What context do we have on this IP address?",
+    "Correlate these alerts - are they related?",
+    "What's the recommended response for this threat type?",
+    "Draft an incident summary for this security event",
+    "Show me similar incidents from the past 90 days"
+  ],
+  "inputs": [
+    "Security alert feeds and SIEM data",
+    "Threat intelligence databases",
+    "Historical incident records",
+    "Network and system logs",
+    "Vulnerability scan results"
+  ],
+  "outputs": [
+    "Alert correlation and prioritization",
+    "Threat context enrichment",
+    "Investigation path recommendations",
+    "Incident report drafts",
+    "Pattern analysis reports"
+  ],
+  "impact": [
+    {
+      "metric": "Alert Triage Time",
+      "value": "50% reduction (projected)",
+      "description": "Faster prioritization of security alerts"
+    },
+    {
+      "metric": "Investigation Efficiency",
+      "value": "2x (projected)",
+      "description": "Faster investigations with better context"
+    }
+  ],
+  "guardrails": [
+    "All response actions require human authorization",
+    "Does not take automated defensive actions",
+    "Threat intelligence from approved sources only",
+    "Incident escalation follows established procedures",
+    "Sensitive security data access strictly controlled"
+  ],
+  "whatsNext": "Validating concept with cybersecurity team. Defining integration with existing security tools.",
+  "relatedAgents": ["regulatory-compliance-agent", "safety-coach-agent"]
+}
+

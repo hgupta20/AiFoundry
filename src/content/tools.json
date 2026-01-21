@@ -1,0 +1,190 @@
+[
+  {
+    "name": "Azure OpenAI Service",
+    "category": "LLM Platform",
+    "description": "Enterprise-grade access to GPT-4 and other OpenAI models with enhanced security, compliance, and regional deployment options.",
+    "strengths": [
+      "Enterprise security and compliance (SOC 2, HIPAA-eligible)",
+      "Data stays within Azure tenant—not used for model training",
+      "Regional deployment options for data residency",
+      "SLA-backed performance and availability",
+      "Seamless integration with Azure ecosystem"
+    ],
+    "bestFitAgentPatterns": [
+      "Knowledge retrieval agents (Ask Cummins, HR Copilot)",
+      "Document analysis and summarization",
+      "Code and technical documentation assistants",
+      "Multi-turn conversational agents"
+    ],
+    "limitations": [
+      "Higher cost than some alternatives",
+      "Limited to OpenAI model family",
+      "Requires Azure subscription and setup"
+    ],
+    "cumminsMaturity": "Production"
+  },
+  {
+    "name": "Amazon Bedrock",
+    "category": "LLM Platform",
+    "description": "AWS managed service providing access to foundation models from multiple providers including Anthropic Claude, Meta Llama, and Amazon Titan.",
+    "strengths": [
+      "Multiple model providers in one platform",
+      "Serverless architecture—pay per use",
+      "Native AWS integration for existing workloads",
+      "Model customization and fine-tuning options",
+      "Guardrails API for safety and compliance"
+    ],
+    "bestFitAgentPatterns": [
+      "Agents requiring model flexibility or comparison",
+      "AWS-native applications and data pipelines",
+      "High-volume batch processing workloads",
+      "Applications needing custom fine-tuned models"
+    ],
+    "limitations": [
+      "Variable model quality across providers",
+      "Complex pricing across different models",
+      "Learning curve for model selection"
+    ],
+    "cumminsMaturity": "Production"
+  },
+  {
+    "name": "Pinecone",
+    "category": "RAG / Vector Search",
+    "description": "Managed vector database optimized for similarity search and retrieval augmented generation (RAG) applications.",
+    "strengths": [
+      "Purpose-built for AI similarity search",
+      "Fully managed—no infrastructure to maintain",
+      "Sub-second query performance at scale",
+      "Simple API for embedding storage and retrieval",
+      "Metadata filtering for hybrid search"
+    ],
+    "bestFitAgentPatterns": [
+      "Knowledge agents requiring semantic search",
+      "Document retrieval (manuals, policies, TSBs)",
+      "Similar case/incident finding",
+      "Lessons learned and failure mode retrieval"
+    ],
+    "limitations": [
+      "Cloud-only deployment",
+      "Cost scales with vector volume",
+      "Vendor lock-in for vector storage"
+    ],
+    "cumminsMaturity": "Production"
+  },
+  {
+    "name": "LangChain / LangGraph",
+    "category": "Orchestration Framework",
+    "description": "Open-source framework for building LLM applications with chains, agents, and retrieval augmented generation workflows.",
+    "strengths": [
+      "Flexible architecture for complex workflows",
+      "Large ecosystem of integrations",
+      "Active community and documentation",
+      "LangGraph enables stateful multi-step agents",
+      "LangSmith provides observability and evaluation"
+    ],
+    "bestFitAgentPatterns": [
+      "Multi-step reasoning agents",
+      "RAG applications with complex retrieval",
+      "Agents requiring tool use and function calling",
+      "Workflows needing human-in-the-loop checkpoints"
+    ],
+    "limitations": [
+      "Rapid API changes require maintenance",
+      "Abstraction overhead for simple use cases",
+      "Learning curve for advanced patterns"
+    ],
+    "cumminsMaturity": "Production"
+  },
+  {
+    "name": "Streamlit",
+    "category": "UI / Prototyping",
+    "description": "Python framework for rapidly building data applications and AI demos with minimal frontend code.",
+    "strengths": [
+      "Extremely fast prototyping",
+      "Python-native—no frontend skills required",
+      "Built-in chat UI components",
+      "Easy deployment and sharing",
+      "Great for internal tools and demos"
+    ],
+    "bestFitAgentPatterns": [
+      "Rapid prototypes and proof of concepts",
+      "Internal analyst tools",
+      "Demo applications for stakeholder review",
+      "Single-user or small team applications"
+    ],
+    "limitations": [
+      "Not suitable for production at scale",
+      "Limited customization options",
+      "Session state management challenges"
+    ],
+    "cumminsMaturity": "Pilot"
+  },
+  {
+    "name": "Guardrails AI",
+    "category": "Eval / Guardrails",
+    "description": "Framework for adding validation, safety checks, and structured output parsing to LLM applications.",
+    "strengths": [
+      "Pre-built validators for common risks",
+      "Structured output enforcement",
+      "PII detection and redaction",
+      "Hallucination detection capabilities",
+      "Integrates with major LLM providers"
+    ],
+    "bestFitAgentPatterns": [
+      "Customer-facing agents requiring safety",
+      "Agents handling sensitive data (HR, Finance)",
+      "Applications requiring structured JSON output",
+      "Regulatory-sensitive use cases"
+    ],
+    "limitations": [
+      "Adds latency to responses",
+      "Custom validators require development",
+      "Evolving API and feature set"
+    ],
+    "cumminsMaturity": "Evaluation"
+  },
+  {
+    "name": "Weights & Biases",
+    "category": "Eval / MLOps",
+    "description": "Platform for experiment tracking, model evaluation, and ML workflow management.",
+    "strengths": [
+      "Excellent experiment tracking and comparison",
+      "LLM evaluation and prompt management",
+      "Team collaboration features",
+      "Comprehensive visualizations",
+      "Model registry for versioning"
+    ],
+    "bestFitAgentPatterns": [
+      "Prompt optimization and A/B testing",
+      "Model evaluation pipelines",
+      "Agent performance monitoring",
+      "Team collaboration on AI development"
+    ],
+    "limitations": [
+      "SaaS dependency for core features",
+      "Cost for large teams",
+      "Learning curve for full feature set"
+    ],
+    "cumminsMaturity": "Pilot"
+  },
+  {
+    "name": "Consumer AI Tools (ChatGPT, Copilot, etc.)",
+    "category": "Consumer AI",
+    "description": "Consumer-grade AI assistants not approved for Cummins business use due to data privacy and governance concerns.",
+    "strengths": [
+      "Easy to use with no setup",
+      "Useful for learning and personal productivity"
+    ],
+    "bestFitAgentPatterns": [
+      "Personal learning and exploration only",
+      "Not for Cummins business use"
+    ],
+    "limitations": [
+      "Data may be used for model training",
+      "No enterprise controls or audit trail",
+      "Cannot verify data handling practices",
+      "No integration with Cummins systems"
+    ],
+    "cumminsMaturity": "Not Approved"
+  }
+]

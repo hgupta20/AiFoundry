@@ -1,0 +1,59 @@
+{
+  "slug": "supplier-performance-negotiation-agent",
+  "name": "Supplier Performance & Negotiation Agent",
+  "tagline": "Data-driven insights for supplier management and negotiations",
+  "lane": "Run",
+  "maturity": "Concept",
+  "persona": ["Procurement", "Manager"],
+  "overview": "The Supplier Performance & Negotiation Agent provides procurement teams with comprehensive supplier performance insights and negotiation preparation support. It aggregates performance data, benchmarks against peers, and helps prepare for supplier discussions with data-backed talking points.",
+  "whatItDoes": [
+    "Aggregates supplier performance across quality, delivery, and cost",
+    "Benchmarks supplier performance against category peers",
+    "Identifies improvement opportunities and trends",
+    "Prepares negotiation briefs with relevant data points",
+    "Tracks commitments and improvement plans"
+  ],
+  "prompts": [
+    "How has Supplier X performed over the last 12 months?",
+    "Benchmark this supplier against others in the category",
+    "What should I focus on in next week's business review?",
+    "Prepare a negotiation brief for contract renewal",
+    "Which suppliers have the most improvement potential?"
+  ],
+  "inputs": [
+    "Supplier quality metrics and scorecards",
+    "Delivery and on-time performance data",
+    "Pricing and cost data",
+    "Contract terms and commitments",
+    "Market benchmarking data"
+  ],
+  "outputs": [
+    "Supplier performance dashboards",
+    "Peer comparison analyses",
+    "Improvement opportunity reports",
+    "Negotiation preparation briefs",
+    "Commitment tracking summaries"
+  ],
+  "impact": [
+    {
+      "metric": "Negotiation Prep Time",
+      "value": "60% reduction (projected)",
+      "description": "Faster preparation with better data"
+    },
+    {
+      "metric": "Supplier Performance",
+      "value": "Improved (projected)",
+      "description": "Better outcomes from data-driven discussions"
+    }
+  ],
+  "guardrails": [
+    "Performance data verified by category managers",
+    "Negotiation strategies developed by procurement professionals",
+    "Does not communicate directly with suppliers",
+    "Pricing decisions follow standard approval processes",
+    "Market benchmarks from approved sources only"
+  ],
+  "whatsNext": "Validating concept with strategic sourcing team. Defining data integration requirements.",
+  "relatedAgents": ["supply-chain-disruption-agent", "cost-to-serve-insight-agent"]
+}
+

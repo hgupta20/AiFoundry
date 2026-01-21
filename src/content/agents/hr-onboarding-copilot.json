@@ -1,0 +1,63 @@
+{
+  "slug": "hr-onboarding-copilot",
+  "name": "HR & Onboarding Copilot",
+  "tagline": "Guides new employees and managers through HR processes seamlessly",
+  "lane": "Run",
+  "maturity": "Pilot",
+  "persona": ["HR", "Manager", "All Employees"],
+  "overview": "The HR & Onboarding Copilot helps new employees navigate their first weeks at Cummins and supports managers through the onboarding process. It provides personalized guidance, answers HR questions, tracks task completion, and ensures nothing falls through the cracks.",
+  "whatItDoes": [
+    "Guides new hires through onboarding tasks and milestones",
+    "Answers HR policy and benefits questions instantly",
+    "Reminds managers of onboarding responsibilities",
+    "Tracks completion of required training and paperwork",
+    "Connects new employees with relevant resources and people"
+  ],
+  "prompts": [
+    "What do I need to complete in my first week?",
+    "How do I set up my 401k contributions?",
+    "What's the process for requesting office equipment?",
+    "When does my health insurance coverage start?",
+    "Who should I contact about access badge issues?"
+  ],
+  "inputs": [
+    "Employee onboarding checklists",
+    "HR policies and benefits documentation",
+    "Training requirements by role",
+    "IT and facilities procedures",
+    "Manager guidance materials"
+  ],
+  "outputs": [
+    "Personalized onboarding task lists",
+    "Policy answers with source links",
+    "Progress tracking dashboards",
+    "Reminder notifications",
+    "Resource and contact recommendations"
+  ],
+  "impact": [
+    {
+      "metric": "Time to Productivity",
+      "value": "2 weeks faster",
+      "description": "New hires productive sooner with better support"
+    },
+    {
+      "metric": "HR Inquiry Reduction",
+      "value": "40%",
+      "description": "Fewer routine questions reaching HR team"
+    },
+    {
+      "metric": "Completion Rate",
+      "value": "95%",
+      "description": "Higher onboarding task completion rate"
+    }
+  ],
+  "guardrails": [
+    "Sensitive HR topics (compensation, performance) escalate to humans",
+    "Does not access personal employee data beyond approved scope",
+    "Benefits guidance includes 'confirm with HR' recommendations",
+    "Legal and compliance questions route to appropriate teams",
+    "All guidance based on current, approved HR materials"
+  ],
+  "relatedAgents": ["ask-cummins-agent", "ai-triage-assistant"]
+}
+

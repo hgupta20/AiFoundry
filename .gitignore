@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Cursor
+.cursor/
+.cursorignore
+.cursorindexingignore
+*.cursorrules
+
+# Spec files (internal use only)
+FOUNDY_BUILD_SPEC.md
+FOUNDY_MASTER_CONTEXT.md
+IDEA_SUBMISSION_SPEC.md

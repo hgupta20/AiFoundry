@@ -1,0 +1,59 @@
+{
+  "slug": "quality-escapes-prevention-agent",
+  "name": "Quality Escapes Prevention Agent",
+  "tagline": "Catches potential quality issues before they escape to customers",
+  "lane": "Make",
+  "maturity": "Concept",
+  "persona": ["Shop Floor", "Engineer"],
+  "overview": "The Quality Escapes Prevention Agent uses pattern recognition across process data, inspection results, and historical defect patterns to identify products at elevated risk of quality issues. It alerts quality teams to investigate before products ship, reducing customer-facing defects.",
+  "whatItDoes": [
+    "Monitors process parameters against quality control limits",
+    "Identifies products with elevated defect risk based on patterns",
+    "Correlates process deviations with historical quality outcomes",
+    "Prioritizes inspection focus on high-risk units",
+    "Generates root cause hypotheses for quality investigations"
+  ],
+  "prompts": [
+    "Which units from today's production have elevated risk?",
+    "What process parameters correlate with this defect type?",
+    "Show me the risk profile for this serial number",
+    "What's driving the increased scrap rate on Line 3?",
+    "Which inspection stations should we prioritize today?"
+  ],
+  "inputs": [
+    "Process parameter data (torque, temperature, cycle time)",
+    "Inspection and test results",
+    "Historical defect and warranty data",
+    "Production tracking data",
+    "Environmental and shift data"
+  ],
+  "outputs": [
+    "Unit-level risk scores and alerts",
+    "Process correlation analysis",
+    "Inspection prioritization recommendations",
+    "Root cause hypotheses",
+    "Trend dashboards and reports"
+  ],
+  "impact": [
+    {
+      "metric": "Quality Escapes",
+      "value": "40% reduction (projected)",
+      "description": "Fewer defects reaching customers"
+    },
+    {
+      "metric": "Inspection Efficiency",
+      "value": "25% improvement (projected)",
+      "description": "Better focus on high-risk units"
+    }
+  ],
+  "guardrails": [
+    "Risk scores are flags for investigation, not automatic holds",
+    "Human quality engineers make all disposition decisions",
+    "Does not replace required inspections or tests",
+    "All recommendations include confidence levels",
+    "Model performance validated against actual escapes"
+  ],
+  "whatsNext": "Developing proof of concept with engine assembly plant. Defining data integration and alert workflows.",
+  "relatedAgents": ["digital-work-instructions-agent", "shop-floor-andon-assistant"]
+}
+

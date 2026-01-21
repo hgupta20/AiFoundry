@@ -1,0 +1,59 @@
+{
+  "slug": "power-system-architect-agent",
+  "name": "Power System Architect Agent",
+  "tagline": "AI-assisted design of integrated power systems for complex applications",
+  "lane": "Transform",
+  "maturity": "Vision",
+  "persona": ["Engineer", "Executive"],
+  "overview": "The Power System Architect Agent envisions AI that assists engineers in designing integrated power systems for complex applications—data centers, marine vessels, mining operations, and distributed generation. It would optimize across engines, generators, storage, and controls to meet demanding performance requirements.",
+  "whatItDoes": [
+    "Analyzes application requirements and constraints",
+    "Proposes integrated system architectures",
+    "Optimizes component selection and sizing",
+    "Models system performance across operating scenarios",
+    "Generates preliminary design documentation"
+  ],
+  "prompts": [
+    "Design a power system for a 20MW data center with 99.999% uptime requirement",
+    "What's the optimal generator configuration for this offshore platform?",
+    "How should we integrate battery storage into this mining operation?",
+    "Compare hybrid vs pure diesel architecture for this marine application",
+    "Optimize this distributed generation system for fuel efficiency"
+  ],
+  "inputs": [
+    "Application requirements and constraints",
+    "Product specifications and performance data",
+    "Site conditions and environmental factors",
+    "Regulatory and emissions requirements",
+    "Historical project databases"
+  ],
+  "outputs": [
+    "System architecture recommendations",
+    "Component selection and sizing",
+    "Performance simulation results",
+    "Preliminary design packages",
+    "Trade-off analysis reports"
+  ],
+  "impact": [
+    {
+      "metric": "Design Cycle Time",
+      "value": "50% reduction (target)",
+      "description": "Faster concept-to-proposal cycles"
+    },
+    {
+      "metric": "Solution Optimization",
+      "value": "Improved (target)",
+      "description": "Better optimized system designs"
+    }
+  ],
+  "guardrails": [
+    "All designs require professional engineering review and stamp",
+    "Safety-critical systems require full manual design review",
+    "AI suggestions inform, not replace, engineering judgment",
+    "Performance guarantees require engineering validation",
+    "Customer commitments made only by authorized personnel"
+  ],
+  "whatsNext": "Vision phase—exploring technical feasibility with power systems engineering. Defining scope and initial use cases.",
+  "relatedAgents": ["fleet-reliability-agent", "energy-transition-advisor"]
+}
+

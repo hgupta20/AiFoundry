@@ -1,36 +1,153 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Cummins AI Foundry
+
+A catalog of AI use cases at Cummins. Browse what's available, see what's coming, and submit your own ideas.
+
+## Overview
+
+The AI Foundry is an internal portfolio site showcasing AI "Agents"—role-based AI capabilities organized by business lanes (Build, Make, Sell & Serve, Run, Protect, Transform). Each agent has clear inputs, outputs, maturity status, and guardrails.
+
+**This is not a production system or committed roadmap.** It's a showcase of what's possible with AI at Cummins.
+
+## Tech Stack
+
+- **Framework**: [Next.js 16](https://nextjs.org/) with App Router
+- **Language**: TypeScript
+- **Styling**: [Tailwind CSS 4](https://tailwindcss.com/)
+- **Content**: JSON files (no database required)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 20+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   cd cummins-ai-foundry
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```
+src/
+├── app/                    # Next.js App Router pages
+│   ├── page.tsx           # Home page
+│   ├── agents/            # Agent gallery and detail pages
+│   │   ├── page.tsx       # /agents - Gallery with filters
+│   │   └── [slug]/        # /agents/[slug] - Agent detail
+│   ├── tools/             # /tools - Tool comparison
+│   ├── submit/            # /submit - Idea submission form
+│   ├── team/              # /team - Foundry team
+│   └── about/             # /about - About the Foundry
+├── components/            # Shared UI components
+│   ├── Header.tsx
+│   ├── Footer.tsx
+│   ├── Container.tsx
+│   ├── AgentCard.tsx
+│   ├── Badge.tsx
+│   └── FilterBar.tsx
+├── content/               # Content as JSON files
+│   ├── agents/            # Individual agent JSON files
+│   ├── tools.json         # Tool comparison data
+│   └── team.json          # Team members
+├── lib/                   # Utilities
+│   └── content.ts         # Content loading functions
+└── types/                 # TypeScript types
+    └── index.ts
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Content Model
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Agents
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Agents are stored as individual JSON files in `src/content/agents/`. Each agent has:
 
-## Learn More
+- **name**: Display name
+- **slug**: URL-friendly identifier
+- **tagline**: One-line description
+- **lane**: Business lane (Front Door, Build, Make, Sell & Serve, Run, Protect, Transform)
+- **maturity**: Live | Pilot | Concept | Vision
+- **persona**: Target users
+- **overview**: Detailed description
+- **whatItDoes**: Array of capabilities
+- **prompts**: Example prompts (3-5)
+- **inputs**: What data it uses
+- **outputs**: What it produces
+- **impact**: Business metrics
+- **guardrails**: Safety and limitations
+- **whatsNext**: Future plans (for Concept/Vision)
 
-To learn more about Next.js, take a look at the following resources:
+### Adding a New Agent
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create a new JSON file in `src/content/agents/`:
+   ```bash
+   touch src/content/agents/my-new-agent.json
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. Follow the schema in `src/types/index.ts`
 
-## Deploy on Vercel
+3. The agent will automatically appear in the gallery
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run start` | Start production server |
+| `npm run lint` | Run ESLint |
+
+## Key Pages
+
+| Route | Description |
+|-------|-------------|
+| `/` | Home page with overview and featured agents |
+| `/agents` | Agent gallery with search and filters |
+| `/agents/[slug]` | Individual agent detail page |
+| `/tools` | Tool comparison (Tools vs Agents) |
+| `/submit` | Submit an AI agent idea |
+| `/team` | Foundry team members |
+| `/about` | About the AI Foundry |
+
+## Development Notes
+
+- **No backend required**: All content is loaded from JSON files at build/request time
+- **No authentication**: This is a demo/showcase site
+- **Idea submissions**: Currently logs to console (demo mode)
+- **Static generation**: Agent pages are statically generated at build time
+
+## Maturity Model
+
+| Status | Meaning |
+|--------|---------|
+| **Live** | Production-ready, actively used |
+| **Pilot** | Testing with limited users |
+| **Concept** | Validated idea, not yet built |
+| **Vision** | Future exploration, not committed |
+
+## Contributing
+
+1. Follow the existing code style
+2. Keep agents content Cummins-specific
+3. All agents must include guardrails
+4. Test locally before submitting changes
+
+## License
+
+Internal use only. © Cummins Inc.

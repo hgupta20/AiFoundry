@@ -1,0 +1,59 @@
+{
+  "slug": "fleet-reliability-agent",
+  "name": "Fleet Reliability Agent",
+  "tagline": "Transforms fleet data into actionable reliability insights at scale",
+  "lane": "Transform",
+  "maturity": "Vision",
+  "persona": ["Manager", "Analyst", "Executive"],
+  "overview": "The Fleet Reliability Agent envisions a future where AI analyzes connected fleet data at massive scale to predict reliability issues, optimize maintenance, and maximize uptime. By learning across thousands of vehicles, it would identify patterns impossible for humans to detect and deliver personalized reliability recommendations.",
+  "whatItDoes": [
+    "Analyzes telemetry from connected fleets at scale",
+    "Predicts component failures before they occur",
+    "Optimizes maintenance schedules across fleets",
+    "Benchmarks reliability against similar applications",
+    "Identifies design improvement opportunities from field data"
+  ],
+  "prompts": [
+    "Which vehicles in this fleet are at highest risk of unplanned downtime?",
+    "What's driving the reliability difference between these two fleets?",
+    "Optimize the maintenance schedule for this regional haul fleet",
+    "What field patterns should engineering investigate?",
+    "Compare this fleet's reliability to the benchmark"
+  ],
+  "inputs": [
+    "Vehicle telemetry and telematics data",
+    "Service history and maintenance records",
+    "Operating conditions and duty cycle data",
+    "Design specifications and known issues",
+    "Fleet benchmark databases"
+  ],
+  "outputs": [
+    "Fleet reliability dashboards and predictions",
+    "Proactive maintenance recommendations",
+    "Failure pattern analysis for engineering",
+    "Benchmark comparisons and insights",
+    "ROI analysis for reliability investments"
+  ],
+  "impact": [
+    {
+      "metric": "Fleet Uptime",
+      "value": "+15% (target)",
+      "description": "Significant uptime improvement through prediction"
+    },
+    {
+      "metric": "Maintenance Optimization",
+      "value": "20% cost reduction (target)",
+      "description": "Optimized maintenance timing and scope"
+    }
+  ],
+  "guardrails": [
+    "Customer data ownership and privacy protected",
+    "Opt-in only for fleet data sharing",
+    "Predictions inform, not mandate, maintenance decisions",
+    "Benchmarks anonymized to protect competitive data",
+    "Safety systems excluded from AI-driven maintenance deferral"
+  ],
+  "whatsNext": "Vision phase—exploring data strategy, business model, and technical architecture. Engaging key fleet customers for requirements.",
+  "relatedAgents": ["energy-transition-advisor", "power-system-architect-agent"]
+}
+

@@ -1,0 +1,58 @@
+{
+  "slug": "warranty-claims-assistant",
+  "name": "Warranty & Claims Assistant",
+  "tagline": "Streamlines warranty claim processing with intelligent review and routing",
+  "lane": "Sell & Serve",
+  "maturity": "Pilot",
+  "persona": ["Service Tech", "Analyst"],
+  "overview": "The Warranty & Claims Assistant accelerates warranty claim processing by automatically categorizing claims, checking against policy, identifying documentation gaps, and routing to appropriate reviewers. It reduces processing time while maintaining compliance with warranty policies.",
+  "whatItDoes": [
+    "Categorizes warranty claims by type and complexity",
+    "Validates claims against warranty policy and coverage",
+    "Identifies missing documentation and requests completion",
+    "Routes claims to appropriate reviewers based on type and value",
+    "Flags potential fraud patterns for investigation"
+  ],
+  "prompts": [
+    "Is this repair covered under the standard warranty?",
+    "What documentation is missing from this claim?",
+    "Flag similar claims for this failure mode",
+    "What's the average approval time for this claim type?",
+    "Route this claim to the appropriate reviewer"
+  ],
+  "inputs": [
+    "Warranty claim submissions",
+    "Service history and repair records",
+    "Warranty policy documents",
+    "Parts and labor catalogs",
+    "Historical claim data"
+  ],
+  "outputs": [
+    "Claim categorization and routing",
+    "Policy compliance assessment",
+    "Documentation completeness check",
+    "Processing time estimates",
+    "Fraud risk flags"
+  ],
+  "impact": [
+    {
+      "metric": "Processing Time",
+      "value": "45% reduction",
+      "description": "Faster claim processing with better routing"
+    },
+    {
+      "metric": "Documentation Quality",
+      "value": "60% fewer returns",
+      "description": "Fewer claims returned for missing information"
+    }
+  ],
+  "guardrails": [
+    "Does not approve or deny claims—human reviewers make decisions",
+    "Policy interpretation validated by warranty team",
+    "Fraud flags require human investigation before action",
+    "High-value claims always receive human review",
+    "All decisions logged with full audit trail"
+  ],
+  "relatedAgents": ["service-technician-copilot", "parts-fitment-alternatives-agent"]
+}
+

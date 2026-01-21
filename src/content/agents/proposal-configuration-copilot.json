@@ -1,0 +1,59 @@
+{
+  "slug": "proposal-configuration-copilot",
+  "name": "Proposal & Configuration Copilot",
+  "tagline": "Creates winning proposals with accurate configurations faster",
+  "lane": "Sell & Serve",
+  "maturity": "Concept",
+  "persona": ["Manager", "Analyst"],
+  "overview": "The Proposal & Configuration Copilot helps sales teams create accurate, compelling proposals faster. It assists with product configuration, generates specification documents, calculates TCO comparisons, and drafts proposal content—freeing salespeople to focus on customer relationships.",
+  "whatItDoes": [
+    "Guides product configuration for customer applications",
+    "Generates specification sheets and technical documentation",
+    "Creates TCO comparisons and value analyses",
+    "Drafts proposal content from templates and past wins",
+    "Validates configurations against engineering constraints"
+  ],
+  "prompts": [
+    "Configure an X15 for regional haul application with max fuel economy",
+    "Generate a TCO comparison vs the competitor for this fleet deal",
+    "Draft the executive summary for this proposal",
+    "What options should I recommend for extreme cold operation?",
+    "Check if this configuration is valid for California compliance"
+  ],
+  "inputs": [
+    "Customer requirements and application details",
+    "Product configuration rules and options",
+    "Pricing and discount structures",
+    "Past proposal content and win/loss data",
+    "Competitive positioning information"
+  ],
+  "outputs": [
+    "Validated product configurations",
+    "Technical specification documents",
+    "TCO and value analysis comparisons",
+    "Draft proposal content",
+    "Configuration validation results"
+  ],
+  "impact": [
+    {
+      "metric": "Proposal Time",
+      "value": "60% reduction (projected)",
+      "description": "Faster proposal creation with better content"
+    },
+    {
+      "metric": "Configuration Accuracy",
+      "value": "Improved (projected)",
+      "description": "Fewer configuration errors in proposals"
+    }
+  ],
+  "guardrails": [
+    "Pricing and discounts require sales manager approval",
+    "Configurations validated against engineering rules",
+    "Competitive claims verified against approved sources",
+    "Customer commitments require human review",
+    "Does not submit proposals or quotes autonomously"
+  ],
+  "whatsNext": "Validating concept with key account sales team. Defining integration with CRM and configuration systems.",
+  "relatedAgents": ["dealer-enablement-agent", "cost-to-serve-insight-agent"]
+}
+

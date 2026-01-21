@@ -1,0 +1,59 @@
+{
+  "slug": "requirements-to-design-copilot",
+  "name": "Requirements-to-Design Copilot",
+  "tagline": "Accelerates translation of requirements into engineering specifications",
+  "lane": "Build",
+  "maturity": "Concept",
+  "persona": ["Engineer"],
+  "overview": "The Requirements-to-Design Copilot assists engineers in converting customer and regulatory requirements into detailed engineering specifications. It analyzes requirements documents, identifies gaps and conflicts, suggests design parameters, and helps ensure traceability throughout the development process.",
+  "whatItDoes": [
+    "Parses and structures requirements from multiple sources",
+    "Identifies gaps, conflicts, and ambiguities in requirements",
+    "Suggests design parameters based on similar past projects",
+    "Maps requirements to test cases and validation criteria",
+    "Maintains traceability between requirements and design decisions"
+  ],
+  "prompts": [
+    "Analyze these customer requirements and identify any conflicts",
+    "What design parameters were used for similar emission requirements?",
+    "Generate test criteria for this durability requirement",
+    "Flag any requirements that lack clear acceptance criteria",
+    "Map these regulatory requirements to our standard design checklist"
+  ],
+  "inputs": [
+    "Customer requirements documents",
+    "Regulatory standards and specifications",
+    "Historical design databases",
+    "Engineering standards library",
+    "Previous project documentation"
+  ],
+  "outputs": [
+    "Structured requirements with traceability links",
+    "Gap and conflict analysis reports",
+    "Suggested design parameters with rationale",
+    "Test case recommendations",
+    "Requirements coverage matrices"
+  ],
+  "impact": [
+    {
+      "metric": "Requirements Review Time",
+      "value": "50% reduction (projected)",
+      "description": "Faster identification of issues and gaps"
+    },
+    {
+      "metric": "Design Rework",
+      "value": "30% reduction (projected)",
+      "description": "Fewer downstream changes due to missed requirements"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—engineers validate all requirements interpretations",
+    "Suggestions based on historical data, not autonomous decisions",
+    "Safety-critical requirements require human sign-off",
+    "Does not replace formal requirements review processes",
+    "All suggestions include confidence levels and source references"
+  ],
+  "whatsNext": "Validating concept with powertrain engineering team. Defining integration points with existing PLM systems.",
+  "relatedAgents": ["test-validation-agent", "failure-modes-lessons-learned-agent"]
+}
+

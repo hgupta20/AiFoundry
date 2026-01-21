@@ -1,0 +1,59 @@
+{
+  "slug": "failure-modes-lessons-learned-agent",
+  "name": "Failure Modes & Lessons Learned Agent",
+  "tagline": "Surfaces relevant failure history to prevent repeat issues",
+  "lane": "Build",
+  "maturity": "Concept",
+  "persona": ["Engineer"],
+  "overview": "The Failure Modes & Lessons Learned Agent helps engineers access institutional knowledge about past failures, root causes, and corrective actions. It surfaces relevant historical issues during design reviews and helps ensure lessons learned are applied to new designs.",
+  "whatItDoes": [
+    "Searches failure history databases using natural language",
+    "Identifies relevant past failures based on design similarity",
+    "Surfaces lessons learned during design review preparation",
+    "Links failure modes to design recommendations",
+    "Tracks closure of lessons-learned actions on new programs"
+  ],
+  "prompts": [
+    "What failures have we seen with similar turbo bearing designs?",
+    "Surface lessons learned relevant to this aftertreatment design",
+    "What root causes have been identified for fuel injector failures?",
+    "Which design changes addressed the 2022 X15 oil leak issue?",
+    "Show me failure modes to review for high-pressure fuel systems"
+  ],
+  "inputs": [
+    "Failure analysis reports",
+    "Root cause investigation records",
+    "Design FMEA databases",
+    "Warranty and field failure data",
+    "Corrective action records"
+  ],
+  "outputs": [
+    "Relevant failure summaries with root causes",
+    "Design recommendations from past issues",
+    "FMEA inputs based on historical data",
+    "Lessons learned checklists for design reviews",
+    "Failure mode risk assessments"
+  ],
+  "impact": [
+    {
+      "metric": "Design Review Quality",
+      "value": "Improved (projected)",
+      "description": "More thorough coverage of historical failure modes"
+    },
+    {
+      "metric": "Knowledge Accessibility",
+      "value": "10x faster",
+      "description": "From days of searching archives to instant retrieval"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—engineers evaluate applicability to current design",
+    "Surfaces information, does not make design decisions",
+    "Confidence levels indicate strength of historical matches",
+    "Does not replace formal FMEA processes",
+    "Sensitive failure data access controlled by role"
+  ],
+  "whatsNext": "Building proof of concept with aftertreatment engineering team. Defining data integration requirements.",
+  "relatedAgents": ["requirements-to-design-copilot", "test-validation-agent"]
+}
+

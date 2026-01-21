@@ -1,0 +1,59 @@
+{
+  "slug": "parts-fitment-alternatives-agent",
+  "name": "Parts Fitment & Alternatives Agent",
+  "tagline": "Finds the right part fast, with alternatives when needed",
+  "lane": "Sell & Serve",
+  "maturity": "Concept",
+  "persona": ["Service Tech", "Dealer"],
+  "overview": "The Parts Fitment & Alternatives Agent helps technicians and dealers quickly identify correct parts for service jobs. When primary parts aren't available, it suggests approved alternatives, supersessions, and kits—getting customers back on the road faster.",
+  "whatItDoes": [
+    "Identifies correct parts based on equipment and application",
+    "Suggests alternatives when primary parts unavailable",
+    "Shows part supersessions and kit options",
+    "Checks real-time availability across distribution network",
+    "Provides fitment verification and compatibility checks"
+  ],
+  "prompts": [
+    "What injectors fit a 2019 X15 with EPA 2017 aftertreatment?",
+    "The primary part is backordered - what alternatives are available?",
+    "Has this part number been superseded?",
+    "Is there a kit that includes all the gaskets I need?",
+    "Can I use this part on both X15 and X12 applications?"
+  ],
+  "inputs": [
+    "Equipment identification and application data",
+    "Parts catalogs and supersession databases",
+    "Inventory availability feeds",
+    "Fitment and compatibility rules",
+    "Kit and assembly information"
+  ],
+  "outputs": [
+    "Part recommendations with fitment confirmation",
+    "Alternative part options ranked by availability",
+    "Supersession history and upgrade paths",
+    "Kit recommendations for common jobs",
+    "Availability and delivery estimates"
+  ],
+  "impact": [
+    {
+      "metric": "Part Lookup Time",
+      "value": "70% reduction (projected)",
+      "description": "Faster identification of correct parts"
+    },
+    {
+      "metric": "Wrong Part Orders",
+      "value": "50% reduction (projected)",
+      "description": "Better fitment verification"
+    }
+  ],
+  "guardrails": [
+    "Fitment recommendations require technician verification",
+    "Alternatives based on engineering-approved substitutions only",
+    "Safety-critical parts require explicit compatibility confirmation",
+    "Does not authorize warranty claims for alternative parts",
+    "Escalates uncertain fitments to parts specialists"
+  ],
+  "whatsNext": "Building proof of concept with parts distribution team. Defining integration with existing catalog systems.",
+  "relatedAgents": ["service-technician-copilot", "warranty-claims-assistant"]
+}
+

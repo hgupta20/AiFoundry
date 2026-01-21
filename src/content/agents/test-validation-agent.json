@@ -1,0 +1,58 @@
+{
+  "slug": "test-validation-agent",
+  "name": "Test & Validation Agent",
+  "tagline": "Accelerates test planning, execution tracking, and results analysis",
+  "lane": "Build",
+  "maturity": "Pilot",
+  "persona": ["Engineer", "Technician"],
+  "overview": "The Test & Validation Agent assists engineering teams with test planning, execution tracking, and results analysis. It helps create test matrices, monitors test progress, identifies anomalies in results, and generates summary reports—reducing administrative burden so engineers can focus on problem-solving.",
+  "whatItDoes": [
+    "Generates test matrices from requirements and specifications",
+    "Tracks test execution status across multiple programs",
+    "Identifies anomalies and outliers in test results",
+    "Compares results against historical baselines and specifications",
+    "Creates summary reports and executive dashboards"
+  ],
+  "prompts": [
+    "Generate a durability test matrix for this engine variant",
+    "Which tests are behind schedule this week?",
+    "Flag any results that deviate more than 2 sigma from baseline",
+    "Compare these emission results to the last three programs",
+    "Summarize test status for the weekly engineering review"
+  ],
+  "inputs": [
+    "Test requirements and specifications",
+    "Test execution logs and status data",
+    "Test results and measurements",
+    "Historical test databases",
+    "Engineering change notices"
+  ],
+  "outputs": [
+    "Test matrices with coverage analysis",
+    "Execution tracking dashboards",
+    "Anomaly alerts with context",
+    "Comparison reports against baselines",
+    "Executive summary reports"
+  ],
+  "impact": [
+    {
+      "metric": "Test Planning Time",
+      "value": "40% reduction",
+      "description": "Faster generation of test matrices and plans"
+    },
+    {
+      "metric": "Issue Detection",
+      "value": "2x faster",
+      "description": "Earlier identification of anomalies in results"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—engineers interpret all test results",
+    "Does not make pass/fail determinations autonomously",
+    "Anomaly flags require human investigation and validation",
+    "Safety-critical test results require formal engineering review",
+    "All comparisons include statistical confidence levels"
+  ],
+  "relatedAgents": ["requirements-to-design-copilot", "simulation-model-explainer"]
+}
+

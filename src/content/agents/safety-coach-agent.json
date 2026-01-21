@@ -1,0 +1,58 @@
+{
+  "slug": "safety-coach-agent",
+  "name": "Safety Coach Agent",
+  "tagline": "Proactive safety guidance and incident learning at scale",
+  "lane": "Protect",
+  "maturity": "Pilot",
+  "persona": ["Safety", "Manager", "Shop Floor"],
+  "overview": "The Safety Coach Agent provides proactive safety guidance and helps the organization learn from incidents and near-misses. It delivers just-in-time safety reminders, analyzes incident patterns, surfaces relevant lessons learned, and supports safety professionals with data-driven insights.",
+  "whatItDoes": [
+    "Delivers context-aware safety reminders and tips",
+    "Analyzes incident and near-miss patterns",
+    "Surfaces lessons learned from past incidents",
+    "Supports safety investigations with similar case data",
+    "Generates safety trend reports for leadership"
+  ],
+  "prompts": [
+    "What are the key safety risks for this operation?",
+    "Show me incidents similar to this near-miss",
+    "What safety trends should I discuss in this week's toolbox talk?",
+    "What PPE is required for this task?",
+    "Generate a safety summary for the monthly review"
+  ],
+  "inputs": [
+    "Job safety analyses and procedures",
+    "Incident and near-miss reports",
+    "Safety observation data",
+    "Training records",
+    "Regulatory requirements"
+  ],
+  "outputs": [
+    "Context-aware safety reminders",
+    "Incident pattern analysis",
+    "Similar case recommendations",
+    "Toolbox talk content suggestions",
+    "Safety trend dashboards"
+  ],
+  "impact": [
+    {
+      "metric": "Near-Miss Reporting",
+      "value": "+45%",
+      "description": "Increased reporting with easier submission"
+    },
+    {
+      "metric": "Incident Pattern Detection",
+      "value": "3x faster",
+      "description": "Faster identification of emerging patterns"
+    }
+  ],
+  "guardrails": [
+    "Does not replace required safety training or procedures",
+    "Incident investigation led by qualified safety professionals",
+    "No punitive use of AI-derived insights against individuals",
+    "Emergency situations always escalate to immediate human response",
+    "All safety recommendations based on approved procedures"
+  ],
+  "relatedAgents": ["regulatory-compliance-agent", "digital-work-instructions-agent"]
+}
+

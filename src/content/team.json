@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Sarah Chen",
+    "role": "AI Foundry Lead",
+    "type": "steward",
+    "focus": ["Strategy", "Governance", "Portfolio Curation"]
+  },
+  {
+    "name": "Marcus Thompson",
+    "role": "Principal AI Engineer",
+    "type": "steward",
+    "focus": ["Architecture", "ML Engineering", "Technical Standards"]
+  },
+  {
+    "name": "Lisa Martinez",
+    "role": "AI Ethics & Governance",
+    "type": "steward",
+    "focus": ["Responsible AI", "Risk Assessment", "Compliance"]
+  },
+  {
+    "name": "David Rodriguez",
+    "role": "Solutions Architect",
+    "type": "contributor",
+    "focus": ["Integration", "Cloud Architecture", "Data Pipelines"]
+  },
+  {
+    "name": "Priya Patel",
+    "role": "Senior Data Scientist",
+    "type": "contributor",
+    "focus": ["ML Models", "Analytics", "Evaluation"]
+  },
+  {
+    "name": "Jennifer Kim",
+    "role": "Product Manager",
+    "type": "contributor",
+    "focus": ["User Research", "Prioritization", "Adoption"]
+  },
+  {
+    "name": "Robert Okonkwo",
+    "role": "ML Engineer",
+    "type": "contributor",
+    "focus": ["MLOps", "Infrastructure", "Monitoring"]
+  },
+  {
+    "name": "James Wilson",
+    "role": "UX Designer",
+    "type": "contributor",
+    "focus": ["Interface Design", "User Testing", "Accessibility"]
+  }
+]

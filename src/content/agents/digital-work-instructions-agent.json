@@ -1,0 +1,58 @@
+{
+  "slug": "digital-work-instructions-agent",
+  "name": "Digital Work Instructions Agent",
+  "tagline": "Delivers the right work instruction at the right time on the shop floor",
+  "lane": "Make",
+  "maturity": "Pilot",
+  "persona": ["Shop Floor", "Technician"],
+  "overview": "The Digital Work Instructions Agent provides shop floor operators with instant access to relevant work instructions, SOPs, and quality standards. It understands context (station, operation, product variant) and delivers just the information needed, reducing time spent searching and improving consistency.",
+  "whatItDoes": [
+    "Delivers work instructions based on current station and operation",
+    "Adapts content for product variant and configuration",
+    "Provides visual aids and step-by-step guidance",
+    "Answers questions about procedures and specifications",
+    "Alerts operators to quality checkpoints and critical steps"
+  ],
+  "prompts": [
+    "Show me the torque sequence for this assembly",
+    "What's the inspection criteria for this weld?",
+    "Are there any alerts for this serial number?",
+    "What's the correct orientation for this component?",
+    "Show me the rework procedure for this defect type"
+  ],
+  "inputs": [
+    "Work instruction documents and SOPs",
+    "Product BOM and configuration data",
+    "Quality standards and inspection criteria",
+    "Station and operation context",
+    "Alert and bulletin feeds"
+  ],
+  "outputs": [
+    "Contextual work instructions",
+    "Visual assembly guides",
+    "Specification callouts",
+    "Quality checkpoint reminders",
+    "Alert notifications"
+  ],
+  "impact": [
+    {
+      "metric": "Instruction Lookup Time",
+      "value": "80% reduction",
+      "description": "From minutes searching to instant delivery"
+    },
+    {
+      "metric": "Procedure Adherence",
+      "value": "15% improvement",
+      "description": "Improved consistency in following correct procedures"
+    }
+  ],
+  "guardrails": [
+    "Assistive only—operators responsible for work quality",
+    "Critical safety steps require explicit acknowledgment",
+    "Does not override engineering change control processes",
+    "Instructions sourced only from approved document systems",
+    "Escalates to supervisor for unrecognized situations"
+  ],
+  "relatedAgents": ["quality-escapes-prevention-agent", "shop-floor-andon-assistant"]
+}
+

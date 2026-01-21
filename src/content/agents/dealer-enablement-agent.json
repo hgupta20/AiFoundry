@@ -1,0 +1,59 @@
+{
+  "slug": "dealer-enablement-agent",
+  "name": "Dealer Enablement Agent",
+  "tagline": "Empowers dealers with instant access to sales and service knowledge",
+  "lane": "Sell & Serve",
+  "maturity": "Concept",
+  "persona": ["Dealer", "Manager"],
+  "overview": "The Dealer Enablement Agent provides dealers with quick access to product information, pricing guidance, inventory availability, and sales tools. It helps dealer staff answer customer questions, configure solutions, and close deals faster with accurate, up-to-date information.",
+  "whatItDoes": [
+    "Answers product and specification questions instantly",
+    "Provides pricing and promotion guidance within policies",
+    "Checks inventory availability across the network",
+    "Assists with product configuration and selection",
+    "Delivers competitive positioning and differentiation points"
+  ],
+  "prompts": [
+    "What's the fuel economy difference between X15 and X12 for this application?",
+    "Is there current inventory for a 500hp ISX15 in the Southeast?",
+    "What rebates are available for fleet customers this quarter?",
+    "How does our warranty compare to the competition?",
+    "Help me configure the right engine for a regional haul application"
+  ],
+  "inputs": [
+    "Product specifications and catalogs",
+    "Pricing and promotion databases",
+    "Inventory management systems",
+    "Competitive intelligence (approved sources)",
+    "Application guidelines"
+  ],
+  "outputs": [
+    "Product comparisons and recommendations",
+    "Pricing and availability information",
+    "Configuration assistance",
+    "Competitive positioning talking points",
+    "Quote and proposal support"
+  ],
+  "impact": [
+    {
+      "metric": "Quote Response Time",
+      "value": "50% faster (projected)",
+      "description": "Faster turnaround on customer inquiries"
+    },
+    {
+      "metric": "Dealer Satisfaction",
+      "value": "Improved (projected)",
+      "description": "Better support for dealer sales teams"
+    }
+  ],
+  "guardrails": [
+    "Pricing guidance within published policies—no autonomous discounting",
+    "Competitive information from approved sources only",
+    "Customer-specific agreements require sales manager review",
+    "Does not commit inventory or make binding quotes",
+    "Escalates complex configurations to Cummins sales support"
+  ],
+  "whatsNext": "Developing concept with dealer council feedback. Defining integration with dealer portal systems.",
+  "relatedAgents": ["service-technician-copilot", "proposal-configuration-copilot"]
+}
+

@@ -1,0 +1,59 @@
+{
+  "slug": "ask-cummins-agent",
+  "name": "Ask Cummins Agent",
+  "tagline": "Chat with trusted Cummins knowledge—policies, manuals, and documentation",
+  "lane": "Front Door",
+  "maturity": "Pilot",
+  "persona": ["All Employees"],
+  "overview": "Ask Cummins is a conversational interface to Cummins' trusted knowledge base. It enables employees to get answers about policies, procedures, technical documentation, and corporate information through natural language conversation. Grounded in approved sources, it provides accurate information with citations.",
+  "whatItDoes": [
+    "Answers questions about HR policies, benefits, and procedures",
+    "Retrieves information from technical manuals and service bulletins",
+    "Explains corporate policies and compliance requirements",
+    "Summarizes long documents and extracts key information",
+    "Provides step-by-step guidance for common processes"
+  ],
+  "prompts": [
+    "What's the policy on remote work for salaried employees?",
+    "Summarize the key changes in the latest ethics policy update",
+    "How do I expense international travel?",
+    "What are the steps to request a job transfer?",
+    "Explain the safety requirements for contractor access"
+  ],
+  "inputs": [
+    "HR policy documents",
+    "Corporate procedures and guidelines",
+    "Technical documentation library",
+    "Training materials",
+    "Compliance and regulatory documents"
+  ],
+  "outputs": [
+    "Direct answers with source citations",
+    "Document summaries and key points",
+    "Step-by-step process guides",
+    "Links to source documents for verification",
+    "Escalation to HR or relevant department when needed"
+  ],
+  "impact": [
+    {
+      "metric": "HR Ticket Reduction",
+      "value": "35%",
+      "description": "Fewer routine policy questions reaching HR team"
+    },
+    {
+      "metric": "Time to Answer",
+      "value": "< 30 seconds",
+      "description": "From hours of searching to instant responses"
+    }
+  ],
+  "guardrails": [
+    "Grounded in approved Cummins sources only—never fabricates information",
+    "All answers include citations to source documents",
+    "Sensitive topics (termination, harassment) escalate to humans",
+    "Human review required for any advice that could have legal implications",
+    "Clearly states limitations and recommends human contact when appropriate"
+  ],
+  "whatsNext": "Expanding knowledge sources to include more technical documentation. Piloting with additional employee groups before broader rollout.",
+  "relatedAgents": ["ai-triage-assistant", "hr-onboarding-copilot"]
+}
+
