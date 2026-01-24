@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Container } from '@/components/Container';
+import { ClipboardList, Lightbulb, Target } from 'lucide-react';
 
 const businessUnits = [
   'Engine',
@@ -14,63 +15,14 @@ const businessUnits = [
   'Other',
 ];
 
-const whoOptions = [
-  'Engineers',
-  'Manufacturing operators',
-  'Technicians',
-  'Dealers',
-  'Customers',
-  'Analysts',
-  'Leaders',
-  'Other',
-];
-
-const frequencyOptions = [
-  { value: '', label: 'Select frequency' },
-  { value: 'one-time', label: 'One-time' },
-  { value: 'daily', label: 'Daily' },
-  { value: 'weekly', label: 'Weekly' },
-  { value: 'monthly', label: 'Monthly' },
-  { value: 'ongoing', label: 'Always / ongoing' },
-];
-
 const impactTypes = [
   'Time saved',
   'Cost reduction',
   'Quality improvement',
-  'Safety / compliance',
+  'Safety or compliance',
   'Customer experience',
-  'Revenue growth',
-  'Reliability / uptime',
+  'Reliability or uptime',
   'Risk reduction',
-];
-
-const agentActions = [
-  'Explain',
-  'Summarize',
-  'Recommend',
-  'Detect patterns',
-  'Draft responses',
-  'Guide decisions',
-];
-
-const inputTypes = [
-  'Documents',
-  'Manuals',
-  'Tickets',
-  'Sensor data',
-  'Emails',
-  'ERP / systems',
-  'Not sure',
-];
-
-const outputTypes = [
-  'Summary',
-  'Checklist',
-  'Recommendation',
-  'Draft',
-  'Alert',
-  'Insight',
 ];
 
 export default function SubmitPage() {
@@ -82,21 +34,9 @@ export default function SubmitPage() {
     collaborators: '',
     // Problem
     problem: '',
-    whoExperiences: [] as string[],
-    frequency: '',
     // Impact
     impactTypes: [] as string[],
     impactNarrative: '',
-    // Agent
-    agentActions: [] as string[],
-    agentDescription: '',
-    inputs: [] as string[],
-    outputs: [] as string[],
-    // Context
-    systems: '',
-    safetyCompliance: '',
-    additionalNotes: '',
-    attachments: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -149,7 +89,7 @@ export default function SubmitPage() {
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
-                  <span>Your idea will be reviewed by the Foundry stewardship team</span>
+                  <span>Your idea will be reviewed by the team</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
@@ -157,7 +97,7 @@ export default function SubmitPage() {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
-                  <span>Not all ideas will move forward—and that&apos;s okay</span>
+                  <span>Some ideas may be showcased as concepts in the Foundry</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
@@ -167,8 +107,7 @@ export default function SubmitPage() {
             </div>
 
             <p className="text-xs text-gray-500 mb-8 max-w-sm mx-auto">
-              Submitting an idea does not commit you or your team to delivery. 
-              No commitment, no obligation.
+            Submitting an idea does not imply a delivery commitment. It helps us explore and learn together.
             </p>
             
             <button
@@ -180,18 +119,8 @@ export default function SubmitPage() {
                   role: '',
                   collaborators: '',
                   problem: '',
-                  whoExperiences: [],
-                  frequency: '',
                   impactTypes: [],
                   impactNarrative: '',
-                  agentActions: [],
-                  agentDescription: '',
-                  inputs: [],
-                  outputs: [],
-                  systems: '',
-                  safetyCompliance: '',
-                  additionalNotes: '',
-                  attachments: '',
                 });
               }}
               className="text-red-600 hover:text-red-700 font-medium"
@@ -209,39 +138,34 @@ export default function SubmitPage() {
       <Container size="sm">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Submit an AI Agent Idea</h1>
-          <p className="text-gray-600 mb-2">
-            Have a problem that could benefit from an AI copilot or agent?
-            <br />
-            <span className="text-gray-500">You don&apos;t need the perfect solution—start with the problem.</span>
-          </p>
-          <p className="text-sm text-gray-500">
-            Ideas can be big or small. Production-ready or conceptual.
-            The Foundry team will review and follow up where appropriate.
-          </p>
-        </div>
-
-        {/* What we're NOT asking for */}
-        <div className="bg-gray-50 border border-gray-200 rounded-lg p-4 mb-8">
-          <p className="text-sm text-gray-600 mb-2">
-            <strong>What we&apos;re NOT asking for:</strong>
-          </p>
-          <div className="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500">
-            <span>❌ Formal business case</span>
-            <span>❌ Exact ROI</span>
-            <span>❌ Executive approval</span>
-            <span>❌ Technical architecture</span>
-            <span>❌ Funding justification</span>
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
+            <Lightbulb className="w-4 h-4 text-red-600" />
+            Submit an AI Agent Idea
           </div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-3">Start with the problem</h1>
+          <p className="text-gray-600 mb-2">
+            Have a problem that could benefit from an AI integrated solution or agent?
+          </p>
+          <p className="text-gray-600">
+            You do not need a solution, a business case, or technical details. Start with the
+            problem. That is enough.
+          </p>
+          <p className="text-sm text-gray-500 mt-3">
+            Ideas can be small or big, early or well-formed. The DBU AI Foundry exists to learn
+            where AI could help and to connect teams working on similar challenges.
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-10">
           {/* Section 1: About You */}
           <section>
             <div className="mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">About You</h2>
+              <div className="flex items-center gap-2 mb-1">
+                <ClipboardList className="w-5 h-5 text-gray-500" />
+                <h2 className="text-lg font-semibold text-gray-900">About You</h2>
+              </div>
               <p className="text-sm text-gray-500">
-                This helps us follow up and understand context. It&apos;s not used for evaluation.
+                This helps us follow up and understand context.
               </p>
             </div>
 
@@ -314,10 +238,11 @@ export default function SubmitPage() {
           {/* Section 2: The Problem */}
           <section>
             <div className="mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">The Problem</h2>
-              <p className="text-sm text-gray-500">
-                You know the problem better than we do—start there.
-              </p>
+              <div className="flex items-center gap-2 mb-1">
+                <Target className="w-5 h-5 text-gray-500" />
+                <h2 className="text-lg font-semibold text-gray-900">The Problem</h2>
+              </div>
+              <p className="text-sm text-gray-500">You know the problem better than anyone. Start there.</p>
             </div>
 
             <div className="space-y-4">
@@ -326,65 +251,27 @@ export default function SubmitPage() {
                   What problem are you trying to solve? <span className="text-red-500">*</span>
                 </label>
                 <p className="text-xs text-gray-500 mb-2">
-                  What slows you down, creates rework, causes errors, or leads to missed opportunities?
+                  Describe what slows work down, creates rework, causes errors, or leads to missed opportunities.
                 </p>
                 <textarea
                   id="problem"
                   required
-                  rows={4}
+                  rows={5}
                   value={formData.problem}
                   onChange={(e) => setFormData({ ...formData, problem: e.target.value })}
-                  placeholder="Describe the challenge, friction, or inefficiency..."
+                  placeholder="Describe what slows work down, creates rework, causes errors, or leads to missed opportunities."
                   className="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
                 />
-              </div>
-
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  Who experiences this problem?
-                </label>
-                <div className="flex flex-wrap gap-2">
-                  {whoOptions.map((option) => (
-                    <button
-                      key={option}
-                      type="button"
-                      onClick={() => handleMultiSelect('whoExperiences', option)}
-                      className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${
-                        formData.whoExperiences.includes(option)
-                          ? 'bg-red-50 border-red-200 text-red-700'
-                          : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
-                      }`}
-                    >
-                      {option}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="frequency" className="block text-sm font-medium text-gray-700 mb-1">
-                  How often does this occur?
-                </label>
-                <select
-                  id="frequency"
-                  value={formData.frequency}
-                  onChange={(e) => setFormData({ ...formData, frequency: e.target.value })}
-                  className="block w-full max-w-xs px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
-                >
-                  {frequencyOptions.map((opt) => (
-                    <option key={opt.value} value={opt.value}>{opt.label}</option>
-                  ))}
-                </select>
               </div>
             </div>
           </section>
 
-          {/* Section 3: Business Impact */}
+          {/* Section 3: Potential Impact */}
           <section>
             <div className="mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">Business Impact</h2>
+              <h2 className="text-lg font-semibold text-gray-900">Potential Impact</h2>
               <p className="text-sm text-gray-500">
-                Optional—but helps us prioritize. Rough estimates are fine.
+                This helps us understand scale and prioritize follow-up. Rough estimates are completely fine.
               </p>
             </div>
 
@@ -416,178 +303,21 @@ export default function SubmitPage() {
                   If you had to estimate impact, what would you say?
                 </label>
                 <p className="text-xs text-gray-500 mb-2">
-                  Examples: &quot;~500 service requests per day&quot; · &quot;~2 hours per engineer per week&quot; · 
-                  &quot;High scrap risk on one line&quot; · &quot;Affects warranty decisions globally&quot;
+                  Examples: &quot;About 2 hours per engineer per week&quot; · &quot;Happens on every service call&quot; ·
+                  &quot;Affects warranty decisions globally&quot;
                 </p>
-                <input
-                  type="text"
+                <textarea
                   id="impactNarrative"
+                  rows={3}
                   value={formData.impactNarrative}
                   onChange={(e) => setFormData({ ...formData, impactNarrative: e.target.value })}
-                  placeholder="Rough estimate is fine..."
+                  placeholder="Share a rough estimate or scope in your own words"
                   className="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
                 />
               </div>
             </div>
           </section>
 
-          {/* Section 4: Imagine the AI Agent */}
-          <section>
-            <div className="mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">Imagine the AI Agent</h2>
-              <p className="text-sm text-gray-500">
-                It&apos;s okay if you&apos;re not sure—this helps us understand the shape of the opportunity.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm font-medium text-gray-700 mb-2">
-                  If an AI agent could help, what would it do?
-                </label>
-                <div className="flex flex-wrap gap-2 mb-3">
-                  {agentActions.map((action) => (
-                    <button
-                      key={action}
-                      type="button"
-                      onClick={() => handleMultiSelect('agentActions', action)}
-                      className={`px-3 py-1.5 text-sm rounded-full border transition-colors ${
-                        formData.agentActions.includes(action)
-                          ? 'bg-red-50 border-red-200 text-red-700'
-                          : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
-                      }`}
-                    >
-                      {action}
-                    </button>
-                  ))}
-                </div>
-                <textarea
-                  id="agentDescription"
-                  rows={2}
-                  value={formData.agentDescription}
-                  onChange={(e) => setFormData({ ...formData, agentDescription: e.target.value })}
-                  placeholder="Describe in your own words (optional)..."
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
-                />
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    What inputs would it use?
-                  </label>
-                  <div className="flex flex-wrap gap-2">
-                    {inputTypes.map((input) => (
-                      <button
-                        key={input}
-                        type="button"
-                        onClick={() => handleMultiSelect('inputs', input)}
-                        className={`px-2.5 py-1 text-xs rounded-full border transition-colors ${
-                          formData.inputs.includes(input)
-                            ? 'bg-red-50 border-red-200 text-red-700'
-                            : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
-                        }`}
-                      >
-                        {input}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">
-                    What output would be most helpful?
-                  </label>
-                  <div className="flex flex-wrap gap-2">
-                    {outputTypes.map((output) => (
-                      <button
-                        key={output}
-                        type="button"
-                        onClick={() => handleMultiSelect('outputs', output)}
-                        className={`px-2.5 py-1 text-xs rounded-full border transition-colors ${
-                          formData.outputs.includes(output)
-                            ? 'bg-red-50 border-red-200 text-red-700'
-                            : 'bg-white border-gray-200 text-gray-600 hover:border-gray-300'
-                        }`}
-                      >
-                        {output}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-
-          {/* Section 5: Context & Constraints */}
-          <section>
-            <div className="mb-4">
-              <h2 className="text-lg font-semibold text-gray-900">Context & Constraints</h2>
-              <p className="text-sm text-gray-500">
-                Optional—helps us understand Cummins-specific realities.
-              </p>
-            </div>
-
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="systems" className="block text-sm font-medium text-gray-700 mb-1">
-                  Systems involved
-                </label>
-                <input
-                  type="text"
-                  id="systems"
-                  value={formData.systems}
-                  onChange={(e) => setFormData({ ...formData, systems: e.target.value })}
-                  placeholder="e.g., SAP, ServiceNow, Teamcenter, SharePoint, custom tools..."
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="safetyCompliance" className="block text-sm font-medium text-gray-700 mb-1">
-                  Any safety, regulatory, or compliance considerations?
-                </label>
-                <select
-                  id="safetyCompliance"
-                  value={formData.safetyCompliance}
-                  onChange={(e) => setFormData({ ...formData, safetyCompliance: e.target.value })}
-                  className="block w-full max-w-xs px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
-                >
-                  <option value="">Select...</option>
-                  <option value="no">No</option>
-                  <option value="yes">Yes</option>
-                  <option value="not-sure">Not sure</option>
-                </select>
-              </div>
-
-              <div>
-                <label htmlFor="additionalNotes" className="block text-sm font-medium text-gray-700 mb-1">
-                  Anything else we should know?
-                </label>
-                <textarea
-                  id="additionalNotes"
-                  rows={2}
-                  value={formData.additionalNotes}
-                  onChange={(e) => setFormData({ ...formData, additionalNotes: e.target.value })}
-                  placeholder="Additional context, constraints, or ideas..."
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="attachments" className="block text-sm font-medium text-gray-700 mb-1">
-                  Attach docs or paste links
-                </label>
-                <input
-                  type="text"
-                  id="attachments"
-                  value={formData.attachments}
-                  onChange={(e) => setFormData({ ...formData, attachments: e.target.value })}
-                  placeholder="Paste links to relevant documents, screenshots, or examples..."
-                  className="block w-full px-3 py-2 border border-gray-300 rounded-md text-sm focus:outline-none focus:ring-1 focus:ring-red-500 focus:border-red-500"
-                />
-              </div>
-            </div>
-          </section>
 
           {/* Submit */}
           <section className="pt-6 border-t border-gray-200">

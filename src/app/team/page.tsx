@@ -10,28 +10,28 @@ export default function TeamPage() {
     {
       name: 'Shannon Metz',
       role: 'Business Owner and Project Sponsor',
-      note: 'Title placeholder',
+      note: 'Global Service Operations Digital Technology Leader',
       description:
         'Provides executive sponsorship and business alignment for the DBU AI Foundry. Ensures the Foundry remains focused on real business value, responsible adoption, and alignment with Cummins priorities.',
     },
     {
       name: 'Jagdheer Killi',
-      role: 'IT Owner',
-      note: 'Title placeholder',
+      role: 'IT Owner and Technical Sponsor',
+      note: 'Global Service Technical Lead-Architect',
       description:
         'Provides architectural guidance and ensures alignment with enterprise technology principles, security expectations, and scalable design patterns.',
     },
     {
       name: 'Harsh Gupta',
       role: 'Application Owner and Technical Owner',
-      note: 'Title placeholder',
+      note: 'Software Engineer II',
       description:
         'Leads application-level design and implementation patterns that support agent development, experimentation, and integration across platforms.',
     },
     {
-      name: 'Rajesh Babu',
+      name: 'Rajesh Babu Mokkapati',
       role: 'Platform Owner',
-      note: 'Title placeholder',
+      note: 'Salesforce Technical Lead',
       description:
         'Supports platform-level enablement and alignment across AI technologies used by agents in the Foundry, ensuring practical fit and responsible use.',
     },
@@ -59,7 +59,7 @@ export default function TeamPage() {
         {/* Core Stewardship Team */}
         <div className="mb-12">
           <h2 className="text-xl font-semibold text-gray-900 mb-2">Core Team</h2>
-          <p className="text-sm text-gray-500 mb-6">Titles listed are placeholders.</p>
+          {/* <p className="text-sm text-gray-500 mb-6">Titles listed are placeholders.</p> */}
           <div className="grid md:grid-cols-2 gap-6">
             {coreStewards.map((member) => (
               <div 

@@ -41,6 +41,7 @@ export function Footer() {
               <ul className="space-y-2">
                 <li><Link href="/team" className="text-sm text-gray-600 hover:text-gray-900">Our Team</Link></li>
                 <li><Link href="/about" className="text-sm text-gray-600 hover:text-gray-900">About DBU AI Foundry</Link></li>
+                <li><Link href="/internal-intake" className="text-sm text-gray-600 hover:text-gray-900">Internal Intake</Link></li>
               </ul>
             </div>
           </div>
