@@ -39,6 +39,7 @@ export interface Agent {
   prompts: string[];        // 3-5 example prompts
   inputs: string[];         // docs, tickets, logs, manuals, etc.
   outputs: string[];        // summaries, checklists, drafts, recommendations
+  systemsOrProcesses?: string[]; // Cummins systems or processes it connects to
   impact: {
     metric: string;
     value: string;
@@ -46,6 +47,7 @@ export interface Agent {
   }[];
   guardrails: string[];     // Always required
   whatsNext?: string;       // For Concept/Vision only
+  futureScope?: string[];   // Potential future applications or extensions
   relatedAgents?: string[];
 }
 

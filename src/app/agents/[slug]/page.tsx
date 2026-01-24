@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { Container } from '@/components/Container';
 import { Badge, LaneBadge } from '@/components/Badge';
 import { getAgentBySlug, getAllAgents } from '@/lib/content';
+import { ArrowRight, Network, Sparkles } from 'lucide-react';
 
 interface AgentDetailPageProps {
   params: Promise<{ slug: string }>;
@@ -84,6 +85,16 @@ export default async function AgentDetailPage({ params }: AgentDetailPageProps) 
               </span>
             ))}
           </div>
+
+          <div className="mt-6">
+            <Link
+              href="#"
+              className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+            >
+              Interact with this agent
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
         </div>
 
         <div className="prose max-w-none">
@@ -146,6 +157,53 @@ export default async function AgentDetailPage({ params }: AgentDetailPageProps) 
                   ))}
                 </ul>
               </div>
+            </div>
+          </section>
+
+          {/* Systems & Processes */}
+          <section className="mb-10">
+            <h2 className="flex items-center gap-2">
+              <Network className="w-5 h-5 text-gray-500" />
+              Cummins Systems or Processes
+            </h2>
+            <div className="bg-white border border-gray-200 rounded-lg p-5 not-prose">
+              {agent.systemsOrProcesses && agent.systemsOrProcesses.length > 0 ? (
+                <ul className="space-y-2">
+                  {agent.systemsOrProcesses.map((item, idx) => (
+                    <li key={idx} className="text-sm text-gray-600 pl-4 border-l-2 border-gray-100">
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm text-gray-600">
+                  Connections are not specified for this agent yet.
+                </p>
+              )}
+            </div>
+          </section>
+
+          {/* Future Scope */}
+          <section className="mb-10">
+            <h2 className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-gray-500" />
+              Future Scope and Possibilities
+            </h2>
+            <div className="bg-blue-50 border border-blue-100 rounded-lg p-5 not-prose">
+              {agent.futureScope && agent.futureScope.length > 0 ? (
+                <ul className="space-y-2">
+                  {agent.futureScope.map((item, idx) => (
+                    <li key={idx} className="text-sm text-blue-900 flex items-start gap-2">
+                      <span className="text-blue-500">→</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-sm text-blue-900">
+                  Future possibilities will be documented as this agent evolves.
+                </p>
+              )}
             </div>
           </section>
 
