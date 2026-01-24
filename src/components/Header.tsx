@@ -9,6 +9,7 @@ const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Agents', href: '/agents' },
   { name: 'AI Platforms', href: '/tools' },
+  { name: 'Resources', href: '/resources' },
   { name: 'Submit Idea', href: '/submit' },
   { name: 'Team', href: '/team' },
   { name: 'About', href: '/about' },
