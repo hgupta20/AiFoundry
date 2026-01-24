@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "AI Foundry | Cummins",
-  description: "Cummins AI Foundry - Internal showcase of AI use cases, tools, and best practices",
+  title: "DBU AI Foundry | Cummins",
+  description: "DBU AI Foundry, an internal showcase of AI use cases, tools, and best practices",
 };
 
 export default function RootLayout({

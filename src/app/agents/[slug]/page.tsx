@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: AgentDetailPageProps) {
   if (!agent) return { title: 'Agent Not Found' };
   
   return {
-    title: `${agent.name} | AI Foundry`,
+    title: `${agent.name} | DBU AI Foundry`,
     description: agent.tagline,
   };
 }

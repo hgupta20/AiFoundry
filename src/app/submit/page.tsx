@@ -138,7 +138,7 @@ export default function SubmitPage() {
               </svg>
             </div>
             <h1 className="text-2xl font-bold text-gray-900 mb-2">
-              Thank you for contributing to the Cummins AI Foundry
+              Thank you for contributing to the DBU AI Foundry
             </h1>
             <p className="text-gray-600 mb-8 max-w-md mx-auto">
               Your idea has been received.

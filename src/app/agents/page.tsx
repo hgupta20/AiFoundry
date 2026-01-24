@@ -4,7 +4,7 @@ import { getAllAgents, getUniqueLanes, getUniquePersonas } from '@/lib/content';
 import { AgentGallery } from './AgentGallery';
 
 export const metadata = {
-  title: 'Agent Gallery | AI Foundry',
+  title: 'Agent Gallery | DBU AI Foundry',
   description: 'Browse all AI agents across the Cummins enterprise',
 };
 
@@ -34,4 +34,3 @@ export default function AgentsPage() {
     </div>
   );
 }
-

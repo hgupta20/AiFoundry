@@ -18,11 +18,11 @@ export function Footer() {
                   className="h-8 w-auto"
                 />
                 <div>
-                  <span className="font-semibold text-gray-900">AI Foundry</span>
+                  <span className="font-semibold text-gray-900">DBU AI Foundry</span>
                 </div>
               </div>
               <p className="text-sm text-gray-600 max-w-md">
-                Cummins AI Foundry showcases our internal AI use cases, tools, and best practices. 
+                DBU AI Foundry showcases our internal AI use cases, tools, and best practices.
                 Building practical AI solutions that deliver measurable business value.
               </p>
             </div>
@@ -31,7 +31,7 @@ export function Footer() {
               <h3 className="font-semibold text-gray-900 mb-3">Navigation</h3>
               <ul className="space-y-2">
                 <li><Link href="/agents" className="text-sm text-gray-600 hover:text-gray-900">Agent Gallery</Link></li>
-                <li><Link href="/tools" className="text-sm text-gray-600 hover:text-gray-900">Tool Comparison</Link></li>
+                <li><Link href="/tools" className="text-sm text-gray-600 hover:text-gray-900">AI Platforms</Link></li>
                 <li><Link href="/submit" className="text-sm text-gray-600 hover:text-gray-900">Submit an Idea</Link></li>
               </ul>
             </div>
@@ -40,7 +40,7 @@ export function Footer() {
               <h3 className="font-semibold text-gray-900 mb-3">Resources</h3>
               <ul className="space-y-2">
                 <li><Link href="/team" className="text-sm text-gray-600 hover:text-gray-900">Our Team</Link></li>
-                <li><Link href="/about" className="text-sm text-gray-600 hover:text-gray-900">About AI Foundry</Link></li>
+                <li><Link href="/about" className="text-sm text-gray-600 hover:text-gray-900">About DBU AI Foundry</Link></li>
               </ul>
             </div>
           </div>
@@ -50,7 +50,7 @@ export function Footer() {
               © {new Date().getFullYear()} Cummins Inc. Internal use only.
             </p>
             <p className="text-sm text-gray-500">
-              AI Foundry v1.0
+              DBU AI Foundry v1.0
             </p>
           </div>
         </div>
@@ -58,4 +58,3 @@ export function Footer() {
     </footer>
   );
 }
-

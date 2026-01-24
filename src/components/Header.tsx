@@ -8,7 +8,7 @@ import { Container } from './Container';
 const navigation = [
   { name: 'Home', href: '/' },
   { name: 'Agents', href: '/agents' },
-  { name: 'Tools', href: '/tools' },
+  { name: 'AI Platforms', href: '/tools' },
   { name: 'Submit Idea', href: '/submit' },
   { name: 'Team', href: '/team' },
   { name: 'About', href: '/about' },
@@ -30,7 +30,7 @@ export function Header() {
               className="h-8 w-auto"
             />
             <div className="flex flex-col">
-              <span className="font-semibold text-gray-900 leading-tight">AI Foundry</span>
+              <span className="font-semibold text-gray-900 leading-tight">DBU AI Foundry</span>
               <span className="text-xs text-gray-500 leading-tight">Cummins</span>
             </div>
           </Link>
@@ -67,4 +67,3 @@ export function Header() {
     </header>
   );
 }
-
