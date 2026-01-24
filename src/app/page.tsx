@@ -2,8 +2,33 @@ import Link from 'next/link';
 import { Container } from '@/components/Container';
 import { Badge } from '@/components/Badge';
 import { getAllAgents, laneDescriptions } from '@/lib/content';
+import {
+  Activity,
+  ArrowRight,
+  Compass,
+  DoorOpen,
+  Factory,
+  Gauge,
+  Handshake,
+  Layers,
+  Lightbulb,
+  Rocket,
+  Shield,
+  Sparkles,
+  Users,
+  Wrench,
+} from 'lucide-react';
 
 const canonicalLanes = ['Front Door', 'Build', 'Make', 'Sell & Serve', 'Run', 'Protect', 'Transform'];
+const laneIcons: Record<string, JSX.Element> = {
+  'Front Door': <DoorOpen className="w-5 h-5 text-gray-600" />,
+  'Build': <Wrench className="w-5 h-5 text-gray-600" />,
+  'Make': <Factory className="w-5 h-5 text-gray-600" />,
+  'Sell & Serve': <Handshake className="w-5 h-5 text-gray-600" />,
+  'Run': <Activity className="w-5 h-5 text-gray-600" />,
+  'Protect': <Shield className="w-5 h-5 text-gray-600" />,
+  'Transform': <Rocket className="w-5 h-5 text-gray-600" />,
+};
 
 export default function HomePage() {
   const agents = getAllAgents();
@@ -23,8 +48,12 @@ export default function HomePage() {
       {/* Hero Section */}
       <Container>
         <div className="max-w-2xl mb-12">
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
+            <Sparkles className="w-4 h-4 text-red-600" />
+            DBU AI Foundry
+          </div>
           <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            AI Foundry
+            Practical AI agents for Cummins teams
           </h1>
           <p className="text-xl text-gray-600 mb-6">
             A catalog of AI use cases at Cummins. Browse what&apos;s available, 
@@ -73,7 +102,10 @@ export default function HomePage() {
       <Container>
         <div className="mb-16">
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-semibold text-gray-900">Featured Agents</h2>
+            <div className="flex items-center gap-2">
+              <Sparkles className="w-5 h-5 text-gray-500" />
+              <h2 className="text-xl font-semibold text-gray-900">Featured Agents</h2>
+            </div>
             <Link href="/agents" className="text-sm text-red-600 hover:text-red-700 font-medium">
               View all {agents.length} agents →
             </Link>
@@ -111,7 +143,10 @@ export default function HomePage() {
       {/* Lanes Section */}
       <div className="bg-white border-y border-gray-200 py-12 mb-16">
         <Container>
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">AI Across Cummins</h2>
+          <div className="flex items-center gap-2 mb-2">
+            <Layers className="w-5 h-5 text-gray-500" />
+            <h2 className="text-xl font-semibold text-gray-900">AI Across Cummins</h2>
+          </div>
           <p className="text-gray-500 mb-6">Agents organized by how Cummins works</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {canonicalLanes.map((lane) => {
@@ -123,7 +158,7 @@ export default function HomePage() {
                   href={`/agents?lane=${encodeURIComponent(lane)}`}
                   className="p-4 rounded-lg border border-gray-200 hover:border-gray-300 hover:bg-gray-50 transition-all"
                 >
-                  <div className="text-2xl mb-2">{info?.icon}</div>
+                  <div className="mb-2">{laneIcons[lane]}</div>
                   <h3 className="font-medium text-gray-900 mb-1">{lane}</h3>
                   <p className="text-sm text-gray-500 mb-2 line-clamp-2">{info?.description}</p>
                   <p className="text-xs text-gray-400">{laneAgents.length} agent{laneAgents.length !== 1 ? 's' : ''}</p>
@@ -137,7 +172,10 @@ export default function HomePage() {
       {/* Maturity Model */}
       <Container>
         <div className="mb-16">
-          <h2 className="text-xl font-semibold text-gray-900 mb-2">Maturity Model</h2>
+          <div className="flex items-center gap-2 mb-2">
+            <Gauge className="w-5 h-5 text-gray-500" />
+            <h2 className="text-xl font-semibold text-gray-900">Maturity Model</h2>
+          </div>
           <p className="text-gray-500 mb-6">Every agent has a clear maturity status</p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <div className="p-5 rounded-lg bg-emerald-50 border border-emerald-100">
@@ -155,13 +193,13 @@ export default function HomePage() {
             <div className="p-5 rounded-lg bg-amber-50 border border-amber-100">
               <Badge maturity="Concept" />
               <p className="mt-3 text-sm text-gray-600">
-                Defined idea, not built. Validated concept with clear path—not committed to ship.
+                Defined idea, not built. Validated concept with clear path, not committed to ship.
               </p>
             </div>
             <div className="p-5 rounded-lg bg-slate-50 border border-slate-100">
               <Badge maturity="Vision" />
               <p className="mt-3 text-sm text-gray-600">
-                High-impact future. Aspirational agents we&apos;re exploring—not committed to ship.
+                High-impact future. Aspirational agents we&apos;re exploring, not committed to ship.
               </p>
             </div>
           </div>
@@ -175,34 +213,52 @@ export default function HomePage() {
             href="/submit"
             className="p-6 bg-white border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-sm transition-all group"
           >
+            <div className="w-10 h-10 rounded-lg bg-red-50 text-red-700 flex items-center justify-center mb-4">
+              <Lightbulb className="w-5 h-5" />
+            </div>
             <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-red-700">
               Submit an Idea
             </h3>
             <p className="text-sm text-gray-600">
-              You don&apos;t need the perfect idea—bring a real problem and we&apos;ll explore together.
+              You don&apos;t need the perfect idea. Bring a real problem and we&apos;ll explore together.
             </p>
+            <span className="text-sm font-medium text-red-600 inline-flex items-center gap-1 mt-4">
+              Share an idea <ArrowRight className="w-4 h-4" />
+            </span>
           </Link>
           <Link 
             href="/tools"
             className="p-6 bg-white border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-sm transition-all group"
           >
+            <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-700 flex items-center justify-center mb-4">
+              <Compass className="w-5 h-5" />
+            </div>
             <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-red-700">
-              Tools vs Agents
+              AI Platforms
             </h3>
             <p className="text-sm text-gray-600">
               Understand the building blocks. Tools are enablers; agents deliver business value.
             </p>
+            <span className="text-sm font-medium text-red-600 inline-flex items-center gap-1 mt-4">
+              Explore platforms <ArrowRight className="w-4 h-4" />
+            </span>
           </Link>
           <Link 
             href="/team"
             className="p-6 bg-white border border-gray-200 rounded-lg hover:border-gray-300 hover:shadow-sm transition-all group"
           >
+            <div className="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-700 flex items-center justify-center mb-4">
+              <Users className="w-5 h-5" />
+            </div>
             <h3 className="font-semibold text-gray-900 mb-2 group-hover:text-red-700">
-              Foundry Team
+              Team &amp; Stewardship
             </h3>
             <p className="text-sm text-gray-600">
               Meet the stewards curating the portfolio and enabling AI across Cummins.
             </p>
+            <span className="text-sm font-medium text-red-600 inline-flex items-center gap-1 mt-4">
+              Learn more <ArrowRight className="w-4 h-4" />
+            </span>
           </Link>
         </div>
       </Container>
