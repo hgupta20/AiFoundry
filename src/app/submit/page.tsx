@@ -89,15 +89,15 @@ export default function SubmitPage() {
               <ul className="space-y-3 text-sm text-gray-600">
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
-                  <span>Your idea will be reviewed by the team</span>
+                  <span>Your idea will be reviewed by the team.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
-                  <span>We may follow up for clarification or to explore a pilot</span>
+                  <span>We may follow up for clarification or to explore a pilot.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
-                  <span>Some ideas may be showcased as concepts in the Foundry</span>
+                  <span>Some ideas may be showcased as concepts in the Foundry.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-emerald-500 mt-0.5">→</span>
@@ -138,26 +138,22 @@ export default function SubmitPage() {
       <Container size="sm">
         {/* Header */}
         <div className="mb-8">
-          <div className="page-hero page-hero--submit px-6 py-6 sm:px-8 sm:py-7">
-            <div className="page-hero-content">
-              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
-                <Lightbulb className="w-4 h-4 text-red-600" />
-                Submit an AI Agent Idea
-              </div>
-              <h1 className="text-3xl font-bold text-gray-900 mb-3">Start with the problem</h1>
-              <p className="text-gray-600 mb-2">
-                Have a problem that could benefit from an AI integrated solution or agent?
-              </p>
-              <p className="text-gray-600">
-                You do not need a solution, a business case, or technical details. Start with the
-                problem. That is enough.
-              </p>
-              <p className="text-sm text-gray-500 mt-3">
-                Ideas can be small or big, early or well-formed. The DBU AI Foundry exists to learn
-                where AI could help and to connect teams working on similar challenges.
-              </p>
-            </div>
+          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
+            <Lightbulb className="w-4 h-4 text-red-600" />
+            Submit an AI Agent Idea
           </div>
+          <h1 className="text-3xl font-bold text-gray-900 mb-3">Start with the problem</h1>
+          <p className="text-gray-600 mb-2">
+            Have a problem that could benefit from an AI integrated solution or agent?
+          </p>
+          <p className="text-gray-600">
+            You do not need a solution, a business case, or technical details. Start with the
+            problem. That is enough.
+          </p>
+          <p className="text-sm text-gray-500 mt-3">
+            Ideas can be small or big, early or well-formed. The DBU AI Foundry exists to learn
+            where AI could help and to connect teams working on similar challenges.
+          </p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-10">
