@@ -22,6 +22,42 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* About header surface */
+.about-hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(250, 250, 250, 0.95));
+}
+
+.about-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(700px 240px at 20% 0%, rgba(200, 16, 46, 0.261), transparent 60%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(200, 16, 46, 0.073) 0px,
+      rgba(200, 16, 46, 0.073) 1px,
+      transparent 1px,
+      transparent 56px
+    ),
+    repeating-linear-gradient(
+      0deg,
+      rgba(15, 23, 42, 0.053) 0px,
+      rgba(15, 23, 42, 0.053) 1px,
+      transparent 1px,
+      transparent 56px
+    );
+  opacity: 1;
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 1;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
