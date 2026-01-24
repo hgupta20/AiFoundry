@@ -41,18 +41,21 @@ export default function TeamPage() {
     <div className="py-12">
       <Container>
         <div className="mb-10">
-          {/* <h1 className="text-3xl font-bold text-gray-900 mb-2">Team &amp; Stewardship</h1> */}
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Team</h1>
-          <div className="max-w-3xl text-gray-600 space-y-3">
-            <p>
-            The DBU AI Foundry is supported by a small core team that helps maintain and organize the Foundry and align technical approaches. This team does not own or operate all agents
-              in the Foundry. Instead, it helps create shared visibility, consistency, and
-              connection across AI work happening in DBU and beyond.
-            </p>
-            <p>
-              Agents showcased in the Foundry are built and owned by many different teams across
-              Cummins.
-            </p>
+          <div className="page-hero page-hero--team px-6 py-6 sm:px-8 sm:py-7">
+            <div className="page-hero-content">
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Team</h1>
+              <div className="max-w-3xl text-gray-600 space-y-3">
+                <p>
+                  The DBU AI Foundry is supported by a small core team that helps maintain and organize the Foundry and align technical approaches. This team does not own or operate all agents
+                  in the Foundry. Instead, it helps create shared visibility, consistency, and
+                  connection across AI work happening in DBU and beyond.
+                </p>
+                <p>
+                  Agents showcased in the Foundry are built and owned by many different teams across
+                  Cummins.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
 

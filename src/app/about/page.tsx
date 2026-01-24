@@ -33,8 +33,8 @@ export default function AboutPage() {
     <div className="py-12">
       <Container size="md">
         <div className="mb-12 pb-8 border-b border-gray-200">
-          <div className="about-hero px-6 py-6 sm:px-8 sm:py-7">
-            <div className="about-hero-content">
+          <div className="page-hero page-hero--about px-6 py-6 sm:px-8 sm:py-7">
+            <div className="page-hero-content">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
                 About
               </p>

@@ -60,12 +60,14 @@ export default async function AgentDetailPage({ params }: AgentDetailPageProps) 
 
         {/* Header */}
         <div className="mb-10">
-          <div className="flex items-center gap-3 mb-4">
-            <Badge maturity={agent.maturity} />
-            <LaneBadge lane={agent.lane} />
-          </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-3">{agent.name}</h1>
-          <p className="text-xl text-gray-600">{agent.tagline}</p>
+          <div className="page-hero page-hero--agents px-6 py-6 sm:px-8 sm:py-7">
+            <div className="page-hero-content">
+              <div className="flex items-center gap-3 mb-4">
+                <Badge maturity={agent.maturity} />
+                <LaneBadge lane={agent.lane} />
+              </div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-3">{agent.name}</h1>
+              <p className="text-xl text-gray-600">{agent.tagline}</p>
           
           {/* Maturity disclaimer for Concept/Vision */}
           {isNotCommitted && (
@@ -77,23 +79,25 @@ export default async function AgentDetailPage({ params }: AgentDetailPageProps) 
             </div>
           )}
           
-          <div className="flex flex-wrap gap-2 mt-4">
-            <span className="text-sm text-gray-500">For:</span>
-            {agent.persona.map((p) => (
-              <span key={p} className="text-sm text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
-                {p}
-              </span>
-            ))}
-          </div>
+              <div className="flex flex-wrap gap-2 mt-4">
+                <span className="text-sm text-gray-500">For:</span>
+                {agent.persona.map((p) => (
+                  <span key={p} className="text-sm text-gray-700 bg-gray-100 px-3 py-1 rounded-full">
+                    {p}
+                  </span>
+                ))}
+              </div>
 
-          <div className="mt-6">
-            <Link
-              href="#"
-              className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
-            >
-              Interact with this agent
-              <ArrowRight className="w-4 h-4" />
-            </Link>
+              <div className="mt-6">
+                <Link
+                  href="#"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+                >
+                  Interact with this agent
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+              </div>
+            </div>
           </div>
         </div>
 

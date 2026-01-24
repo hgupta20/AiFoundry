@@ -47,31 +47,33 @@ export default function HomePage() {
     <div className="py-12">
       {/* Hero Section */}
       <Container>
-        <div className="max-w-2xl mb-12">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
-            <Sparkles className="w-4 h-4 text-red-600" />
-            DBU AI Foundry
-          </div>
-          <h1 className="text-4xl font-bold text-gray-900 mb-3">
-            Practical AI agents for Cummins teams
-          </h1>
-          <p className="text-xl text-gray-600 mb-6">
-            A catalog of AI use cases at Cummins. Browse what&apos;s available, 
-            see what&apos;s coming, and submit your own ideas.
-          </p>
-          <div className="flex items-center gap-4">
-            <Link 
-              href="/agents" 
-              className="px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
-            >
-              Browse {agents.length} Agents
-            </Link>
-            <Link 
-              href="/submit" 
-              className="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors"
-            >
-              Submit an Idea
-            </Link>
+        <div className="home-hero px-6 py-6 sm:px-8 sm:py-8 mb-12">
+          <div className="home-hero-content max-w-2xl">
+            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
+              <Sparkles className="w-4 h-4 text-red-600" />
+              DBU AI Foundry
+            </div>
+            <h1 className="text-4xl font-bold text-gray-900 mb-3">
+              Practical AI agents for Cummins teams
+            </h1>
+            <p className="text-xl text-gray-600 mb-6">
+              A catalog of AI use cases at Cummins. Browse what&apos;s available, 
+              see what&apos;s coming, and submit your own ideas.
+            </p>
+            <div className="flex items-center gap-4">
+              <Link 
+                href="/agents" 
+                className="px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
+              >
+                Browse {agents.length} Agents
+              </Link>
+              <Link 
+                href="/submit" 
+                className="px-4 py-2 bg-white border border-gray-300 text-gray-700 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors"
+              >
+                Submit an Idea
+              </Link>
+            </div>
           </div>
         </div>
       </Container>

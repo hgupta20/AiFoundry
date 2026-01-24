@@ -69,21 +69,23 @@ export default function ToolsPage() {
       <Container>
         {/* AI Platforms Header */}
         <div className="mb-10">
-          <h1 className="text-3xl font-bold text-gray-900 mb-4">AI Platforms</h1>
-          <div className="max-w-3xl">
-            <p className="text-xl text-gray-600 mb-4">
-              AI agents deliver value at Cummins. Platforms and technologies enable those agents.
-            </p>
-            <p className="text-gray-500">
-              This page provides a high-level view of the AI platforms currently used or evaluated
-              across DBU to build and support AI agents. The intent is clarity and alignment, not
-              technical comparison or vendor promotion.
-            </p>
-            <p className="text-gray-500 mt-3">
-              Platforms are assessed based on how well they support the agent patterns Cummins
-              teams are building today, how they fit existing enterprise systems, and how
-              responsibly they can be applied at scale.
-            </p>
+          <div className="page-hero page-hero--tools px-6 py-6 sm:px-8 sm:py-7">
+            <div className="page-hero-content max-w-3xl">
+              <h1 className="text-3xl font-bold text-gray-900 mb-4">AI Platforms</h1>
+              <p className="text-xl text-gray-600 mb-4">
+                AI agents deliver value at Cummins. Platforms and technologies enable those agents.
+              </p>
+              <p className="text-gray-500">
+                This page provides a high-level view of the AI platforms currently used or evaluated
+                across DBU to build and support AI agents. The intent is clarity and alignment, not
+                technical comparison or vendor promotion.
+              </p>
+              <p className="text-gray-500 mt-3">
+                Platforms are assessed based on how well they support the agent patterns Cummins
+                teams are building today, how they fit existing enterprise systems, and how
+                responsibly they can be applied at scale.
+              </p>
+            </div>
           </div>
         </div>
 

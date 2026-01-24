@@ -223,12 +223,16 @@ export default function SubmitPage() {
       <Container size="sm">
         {/* Header */}
         <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Internal Intake</h1>
-          <p className="text-gray-600">
-            This internal intake captures the detailed information needed to assess and shape AI
-            agent opportunities. Please complete the sections below to support follow-up and
-            evaluation.
-          </p>
+          <div className="page-hero page-hero--intake px-6 py-6 sm:px-8 sm:py-7">
+            <div className="page-hero-content">
+              <h1 className="text-3xl font-bold text-gray-900 mb-2">Internal Intake</h1>
+              <p className="text-gray-600">
+                This internal intake captures the detailed information needed to assess and shape AI
+                agent opportunities. Please complete the sections below to support follow-up and
+                evaluation.
+              </p>
+            </div>
+          </div>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-10">

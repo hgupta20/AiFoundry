@@ -56,15 +56,19 @@ export default function ResourcesPage() {
     <div className="py-12">
       <Container>
         <div className="mb-10">
-          <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
-            <BookOpen className="w-4 h-4 text-red-600" />
-            Resources
+          <div className="page-hero page-hero--resources px-6 py-6 sm:px-8 sm:py-7">
+            <div className="page-hero-content max-w-3xl">
+              <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.2em] text-gray-500 mb-3">
+                <BookOpen className="w-4 h-4 text-red-600" />
+                Resources
+              </div>
+              <h1 className="text-3xl font-bold text-gray-900 mb-3">AI resources for teams</h1>
+              <p className="text-gray-600">
+                A curated set of internal and external references to support clear, responsible, and
+                practical AI agent work across Cummins.
+              </p>
+            </div>
           </div>
-          <h1 className="text-3xl font-bold text-gray-900 mb-3">AI resources for teams</h1>
-          <p className="text-gray-600 max-w-3xl">
-            A curated set of internal and external references to support clear, responsible, and
-            practical AI agent work across Cummins.
-          </p>
         </div>
 
         <div className="mb-12">
