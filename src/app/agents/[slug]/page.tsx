@@ -90,7 +90,7 @@ export default async function AgentDetailPage({ params }: AgentDetailPageProps) 
 
               <div className="mt-6">
                 <Link
-                  href="#"
+                  href={`/agents/${agent.slug}/chat`}
                   className="inline-flex items-center gap-2 px-4 py-2 bg-red-600 text-white rounded-md text-sm font-medium hover:bg-red-700 transition-colors"
                 >
                   Interact with this agent
